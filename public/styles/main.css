@@ -1,0 +1,68 @@
+/* === Variables === */
+:root {
+  --bg: #0B0B0C;
+  --panel: #101012;
+  --ink: #EFEDE9;
+  --dim: #A3A3A8;
+  --faint: #8A8A90;
+  --line: rgba(239, 237, 233, .12);
+  --acc: #D8A24A;
+}
+
+/* === Reset & Base === */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Geist", "Helvetica Neue", Helvetica, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--acc);
+}
+
+:focus-visible {
+  outline: 2px solid var(--acc);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--acc);
+  color: #0B0B0C;
+}
+
+/* === Animations === */
+@keyframes travel {
+  0% { top: 0; opacity: 0; }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: .35; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.35); }
+}
+
+/* === Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

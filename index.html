@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+</helmet>
+
+<div style="max-width:1680px;margin:0 auto;overflow-x:clip">
+
+<header style="position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:16px clamp(18px,3.6vw,56px);background:rgba(11,11,12,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)">
+<a href="#top" style="font-size:12px;font-weight:600;letter-spacing:.16em">CRISTIAN BOHÓRQUEZ</a>
+<div style="display:flex;align-items:center;gap:clamp(14px,2vw,34px);flex-wrap:wrap">
+<div style="display:flex;align-items:center;gap:8px;padding-right:clamp(4px,1.4vw,18px)">
+<span style="width:6px;height:6px;border-radius:50%;background:var(--acc);animation:breathe 2.8s ease-in-out infinite"></span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--dim)">OPEN TO OPPORTUNITIES</span>
+</div>
+<nav style="display:flex;gap:clamp(12px,1.8vw,26px);flex-wrap:wrap">
+<a href="#work" style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.16em;color:var(--dim)" style-hover="color:var(--ink)">WORK</a>
+<a href="#engineering" style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.16em;color:var(--dim)" style-hover="color:var(--ink)">ENGINEERING</a>
+<a href="#about" style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.16em;color:var(--dim)" style-hover="color:var(--ink)">ABOUT</a>
+<a href="#contact" style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.16em;color:var(--dim)" style-hover="color:var(--ink)">CONTACT</a>
+</nav>
+<div style="display:flex;align-items:center;gap:7px;padding-left:clamp(8px,1.4vw,18px);border-left:1px solid var(--line)">
+<button type="button" data-lang="en" onClick="{{ setEn }}" style="background:none;border:0;padding:3px 0;cursor:pointer;font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.16em;color:var(--acc);transition:color .3s ease">EN</button>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint)">/</span>
+<button type="button" data-lang="es" onClick="{{ setEs }}" style="background:none;border:0;padding:3px 0;cursor:pointer;font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.16em;color:var(--faint);transition:color .3s ease">ES</button>
+</div>
+</div>
+</header>
+
+<section data-dots data-screen-label="Hero — dot matrix name" style="position:relative;height:100vh;min-height:600px;overflow:hidden;background:#0a0a0a;border-bottom:1px solid var(--line)">
+<h1 style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0">Cristian Bohórquez — Full-Stack Software Developer</h1>
+<canvas data-dots-canvas aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
+<div style="position:absolute;left:clamp(18px,3.6vw,56px);bottom:clamp(20px,3vw,40px);display:flex;flex-wrap:wrap;gap:8px 22px;font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.16em;color:var(--faint);pointer-events:none">
+<span>FULL-STACK SOFTWARE DEVELOPER</span><span>BOGOTÁ, COLOMBIA</span>
+</div>
+<div style="position:absolute;right:clamp(18px,3.6vw,56px);bottom:clamp(20px,3vw,40px);font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.16em;color:var(--faint);pointer-events:none">SCROLL ↓</div>
+</section>
+
+<section id="top" data-screen-label="Hero" style="padding:clamp(48px,7vw,110px) clamp(18px,3.6vw,56px) clamp(40px,5vw,72px)">
+<div style="display:flex;flex-wrap:wrap;gap:clamp(28px,4vw,64px);align-items:flex-end">
+<div style="flex:1 1 min(100%,640px);min-width:0">
+<div data-reveal style="display:flex;align-items:center;gap:12px;margin-bottom:clamp(24px,3vw,44px)">
+<span style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.2em;color:var(--acc)">00</span>
+<span style="height:1px;flex:0 0 44px;background:var(--line)"></span>
+<span style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.18em;color:var(--faint)">PORTFOLIO / 2026</span>
+</div>
+<h1 data-reveal style="margin:0;font-size:clamp(52px,9vw,152px);line-height:.88;letter-spacing:-.035em;font-weight:600">WHERE IDEAS<br>BECOME<br><span style="color:var(--acc)">SYSTEMS.</span></h1>
+<p data-reveal data-delay="120" style="margin:clamp(28px,3.4vw,44px) 0 0;max-width:52ch;font-size:clamp(15px,1.25vw,19px);line-height:1.6;color:var(--dim);font-weight:300">Full-Stack Software Developer building scalable web applications, e-commerce platforms, APIs and digital products with modern TypeScript technologies.</p>
+<div data-reveal data-delay="200" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(28px,3vw,40px)">
+<a href="#work" data-magnet style="display:inline-flex;align-items:center;gap:12px;padding:16px 26px;background:var(--ink);color:#0B0B0C;font-size:11.5px;font-weight:600;letter-spacing:.14em;transition:background .35s ease,color .35s ease,transform .3s cubic-bezier(.16,1,.3,1)" style-hover="background:var(--acc)">VIEW SELECTED WORK<span style="font-family:'Poppins',sans-serif">↓</span></a>
+<a href="#contact" data-magnet style="display:inline-flex;align-items:center;gap:12px;padding:16px 26px;border:1px solid var(--line);color:var(--ink);font-size:11.5px;font-weight:600;letter-spacing:.14em;transition:border-color .35s ease,color .35s ease,transform .3s cubic-bezier(.16,1,.3,1)" style-hover="border-color:var(--acc);color:var(--acc)">GET IN TOUCH<span style="font-family:'Poppins',sans-serif">→</span></a>
+</div>
+</div>
+
+<div data-reveal data-delay="260" style="flex:1 1 min(100%,300px);min-width:0;padding-bottom:8px">
+<div style="position:relative;padding:clamp(20px,2vw,30px) 0 clamp(20px,2vw,30px) 26px">
+<span style="position:absolute;left:4px;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--line) 12%,var(--line) 88%,transparent)"></span>
+<span data-pulse style="position:absolute;left:1px;width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 14px var(--acc);animation:travel 5.5s linear infinite"></span>
+<div style="display:flex;flex-direction:column;gap:clamp(18px,2.2vw,30px)">
+<div style="display:flex;align-items:baseline;gap:14px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint)">L1</span><span style="font-size:clamp(13px,1.1vw,15px);letter-spacing:.06em;font-weight:500">FRONTEND</span><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);margin-left:auto">Next.js · RSC</span></div>
+<div style="display:flex;align-items:baseline;gap:14px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint)">L2</span><span style="font-size:clamp(13px,1.1vw,15px);letter-spacing:.06em;font-weight:500">API</span><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);margin-left:auto">GraphQL · NestJS</span></div>
+<div style="display:flex;align-items:baseline;gap:14px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint)">L3</span><span style="font-size:clamp(13px,1.1vw,15px);letter-spacing:.06em;font-weight:500">DATABASE</span><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);margin-left:auto">PostgreSQL</span></div>
+<div style="display:flex;align-items:baseline;gap:14px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint)">L4</span><span style="font-size:clamp(13px,1.1vw,15px);letter-spacing:.06em;font-weight:500">INFRASTRUCTURE</span><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);margin-left:auto">Vercel · Railway</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:clamp(14px,3vw,48px);margin-top:clamp(40px,5vw,80px);padding-top:18px;border-top:1px solid var(--line);font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.16em;color:var(--faint)">
+<span>BOGOTÁ, COLOMBIA</span>
+<span>FULL-STACK DEVELOPER · 4+ YEARS</span>
+<span>OPEN TO INTERNATIONAL OPPORTUNITIES</span>
+<span style="margin-left:auto;color:var(--dim)">SCROLL ↓</span>
+</div>
+</section>
+
+<section id="work" data-screen-label="01 Selected work" style="padding:clamp(56px,8vw,140px) clamp(18px,3.6vw,56px) clamp(40px,5vw,80px);border-top:1px solid var(--line)">
+<div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between;margin-bottom:clamp(36px,5vw,72px)">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.2em;color:var(--acc);margin-bottom:18px">SECTION 01</div>
+<h2 data-reveal style="margin:0;font-size:clamp(38px,6.4vw,104px);line-height:.9;letter-spacing:-.03em;font-weight:600">SELECTED WORK</h2>
+</div>
+<p data-reveal data-delay="100" style="margin:0;max-width:34ch;font-size:clamp(13px,1.05vw,16px);line-height:1.6;color:var(--dim);font-weight:300">Real products. Real constraints. Real engineering.</p>
+</div>
+
+<article data-project data-label="TIKARIY" style="display:block;padding-bottom:clamp(40px,5vw,72px);border-bottom:1px solid var(--line)">
+<div style="display:flex;flex-wrap:wrap-reverse;gap:clamp(24px,3.4vw,56px);align-items:stretch">
+<div style="flex:1 1 min(100%,300px);min-width:0;display:flex;flex-direction:column;justify-content:space-between;gap:28px">
+<div>
+<div data-num style="font-family:'Poppins',sans-serif;font-size:clamp(56px,7vw,110px);line-height:.85;color:transparent;-webkit-text-stroke:1px var(--faint);transition:-webkit-text-stroke-color .45s ease,color .45s ease">01</div>
+<h3 data-title style="margin:20px 0 0;font-size:clamp(30px,3.6vw,58px);line-height:1;letter-spacing:-.02em;font-weight:600;transition:color .4s ease">TIKARIY</h3>
+<p style="margin:16px 0 0;max-width:36ch;font-size:clamp(13px,1.05vw,16px);line-height:1.6;color:var(--dim);font-weight:300">Educational toys e-commerce platform — catalog, checkout, invoicing and admin, built and shipped end to end.</p>
+</div>
+<div>
+<div style="display:flex;flex-wrap:wrap;gap:6px 14px;font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint);padding-top:18px;border-top:1px solid var(--line)">
+<span>NEXT.JS</span><span>TYPESCRIPT</span><span>NESTJS</span><span>GRAPHQL</span><span>POSTGRESQL</span><span>TYPEORM</span><span>TAILWIND</span><span>SHADCN/UI</span><span>CLOUDINARY</span><span>WOMPI</span><span>SIIGO</span><span>VERCEL</span><span>RAILWAY</span>
+</div>
+<a href="#case" data-cta style="display:inline-flex;align-items:center;gap:10px;margin-top:26px;font-size:11.5px;font-weight:600;letter-spacing:.14em;color:var(--ink);transition:gap .35s ease,color .35s ease">VIEW CASE STUDY<span style="font-family:'Poppins',sans-serif">→</span></a>
+</div>
+</div>
+<div style="flex:1 1 min(100%,440px);min-width:0;overflow:hidden;border:1px solid var(--line);background:var(--panel)">
+<div data-img style="aspect-ratio:16/10;display:flex;align-items:flex-end;padding:18px;background:repeating-linear-gradient(122deg,rgba(239,237,233,.05) 0 10px,transparent 10px 22px);transition:transform .9s cubic-bezier(.16,1,.3,1)">
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint)">[ PRODUCT SHOT — TIKARIY STOREFRONT ]</span>
+</div>
+</div>
+</div>
+</article>
+
+<div style="display:flex;flex-wrap:wrap;gap:0">
+<article data-project style="flex:1 1 min(100%,320px);min-width:0;padding:clamp(28px,3vw,44px) clamp(20px,2.4vw,36px) clamp(28px,3vw,40px) 0;border-bottom:1px solid var(--line)">
+<div data-num style="font-family:'Poppins',sans-serif;font-size:clamp(34px,3.6vw,56px);line-height:.9;color:transparent;-webkit-text-stroke:1px var(--faint);transition:-webkit-text-stroke-color .45s ease">02</div>
+<div style="overflow:hidden;border:1px solid var(--line);background:var(--panel);margin:22px 0">
+<div data-img style="aspect-ratio:16/9;display:flex;align-items:flex-end;padding:14px;background:repeating-linear-gradient(122deg,rgba(239,237,233,.045) 0 8px,transparent 8px 18px);transition:transform .9s cubic-bezier(.16,1,.3,1)"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint)">[ DASHBOARD SHOT ]</span></div>
+</div>
+<h3 data-title style="margin:0;font-size:clamp(22px,2.2vw,32px);letter-spacing:-.015em;font-weight:600;transition:color .4s ease">ENERGYMSI</h3>
+<p style="margin:12px 0 18px;max-width:38ch;font-size:14px;line-height:1.6;color:var(--dim);font-weight:300">Corporate web platform with a Prisma data layer on Neon and an automated lead-generation chatbot.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px 12px;font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)"><span>NEXT.JS</span><span>TYPESCRIPT</span><span>PRISMA</span><span>NEON</span><span>CLOUDINARY</span><span>MANYCHAT</span></div>
+</article>
+<article data-project style="flex:1 1 min(100%,320px);min-width:0;padding:clamp(28px,3vw,44px) 0 clamp(28px,3vw,40px) clamp(20px,2.4vw,36px);border-bottom:1px solid var(--line);border-left:1px solid var(--line)">
+<div data-num style="font-family:'Poppins',sans-serif;font-size:clamp(34px,3.6vw,56px);line-height:.9;color:transparent;-webkit-text-stroke:1px var(--faint);transition:-webkit-text-stroke-color .45s ease">03</div>
+<div style="overflow:hidden;border:1px solid var(--line);background:var(--panel);margin:22px 0">
+<div data-img style="aspect-ratio:16/9;display:flex;align-items:flex-end;padding:14px;background:repeating-linear-gradient(122deg,rgba(239,237,233,.045) 0 8px,transparent 8px 18px);transition:transform .9s cubic-bezier(.16,1,.3,1)"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint)">[ STOREFRONT SHOT ]</span></div>
+</div>
+<h3 data-title style="margin:0;font-size:clamp(22px,2.2vw,32px);letter-spacing:-.015em;font-weight:600;transition:color .4s ease">HEADLESS COMMERCE</h3>
+<p style="margin:12px 0 18px;max-width:38ch;font-size:14px;line-height:1.6;color:var(--dim);font-weight:300">Freelance e-commerce on a microservices architecture, with SOLID applied across the project.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px 12px;font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)"><span>NEXT.JS</span><span>NESTJS</span><span>GRAPHQL</span><span>NODE.JS</span><span>SQL</span></div>
+</article>
+<article data-project style="flex:1 1 min(100%,320px);min-width:0;padding:clamp(28px,3vw,44px) clamp(20px,2.4vw,36px) clamp(28px,3vw,40px) 0">
+<div data-num style="font-family:'Poppins',sans-serif;font-size:clamp(34px,3.6vw,56px);line-height:.9;color:transparent;-webkit-text-stroke:1px var(--faint);transition:-webkit-text-stroke-color .45s ease">04</div>
+<div style="overflow:hidden;border:1px solid var(--line);background:var(--panel);margin:22px 0">
+<div data-img style="aspect-ratio:16/9;display:flex;align-items:flex-end;padding:14px;background:repeating-linear-gradient(122deg,rgba(239,237,233,.045) 0 8px,transparent 8px 18px);transition:transform .9s cubic-bezier(.16,1,.3,1)"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint)">[ JOB PLATFORM SHOT ]</span></div>
+</div>
+<h3 data-title style="margin:0;font-size:clamp(22px,2.2vw,32px);letter-spacing:-.015em;font-weight:600;transition:color .4s ease">JOBGETHER</h3>
+<p style="margin:12px 0 18px;max-width:38ch;font-size:14px;line-height:1.6;color:var(--dim);font-weight:300">International job platform: scalable state management and maintainable components for a distributed team.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px 12px;font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)"><span>VUE.JS 3</span><span>NUXT.JS</span><span>PINIA</span><span>SCRUM</span></div>
+</article>
+<article data-project style="flex:1 1 min(100%,320px);min-width:0;padding:clamp(28px,3vw,44px) 0 clamp(28px,3vw,40px) clamp(20px,2.4vw,36px);border-left:1px solid var(--line);display:flex;align-items:flex-end">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.16em;color:var(--faint);margin-bottom:16px">MORE WORK</div>
+<p style="margin:0 0 20px;max-width:26ch;font-size:clamp(16px,1.6vw,22px);line-height:1.35;color:var(--ink);font-weight:400">Full case studies and source available on request.</p>
+<a href="#contact" style="display:inline-flex;align-items:center;gap:10px;font-size:11.5px;font-weight:600;letter-spacing:.14em;color:var(--acc)">REQUEST ACCESS<span style="font-family:'Poppins',sans-serif">→</span></a>
+</div>
+</article>
+</div>
+</section>
+
+<section data-screen-label="01b Experience" style="padding:clamp(48px,6.5vw,110px) clamp(18px,3.6vw,56px);border-top:1px solid var(--line)">
+<div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between;margin-bottom:clamp(30px,3.6vw,56px)">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.2em;color:var(--acc);margin-bottom:18px">EXPERIENCE</div>
+<h2 data-reveal style="margin:0;font-size:clamp(30px,4.4vw,72px);line-height:.92;letter-spacing:-.03em;font-weight:600">WHERE I'VE BUILT</h2>
+</div>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint)">2020 → PRESENT</span>
+</div>
+<div style="display:flex;flex-direction:column">
+<div data-reveal data-layer style="display:flex;flex-wrap:wrap;align-items:baseline;gap:10px clamp(14px,2.4vw,40px);padding:clamp(18px,2vw,26px) 0;border-top:1px solid var(--line);transition:background .4s ease,padding-left .4s ease">
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);flex:0 0 92px">JAN 2026 —</span>
+<span style="flex:0 0 auto;font-size:clamp(19px,2.1vw,30px);letter-spacing:-.02em;font-weight:500">Tikariy</span>
+<span style="flex:1 1 min(100%,300px);font-size:14px;line-height:1.6;color:var(--dim);font-weight:300">Fullstack Developer — production e-commerce platform for educational products, from schema to deployment.</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.1em;color:var(--faint)">NEXT.JS · NESTJS · GRAPHQL · POSTGRESQL</span>
+</div>
+<div data-reveal data-layer data-delay="60" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:10px clamp(14px,2.4vw,40px);padding:clamp(18px,2vw,26px) 0;border-top:1px solid var(--line);transition:background .4s ease,padding-left .4s ease">
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);flex:0 0 92px">2025</span>
+<span style="flex:0 0 auto;font-size:clamp(19px,2.1vw,30px);letter-spacing:-.02em;font-weight:500">EnergyMSI</span>
+<span style="flex:1 1 min(100%,300px);font-size:14px;line-height:1.6;color:var(--dim);font-weight:300">Fullstack Developer — web platform, data layer on Neon with Prisma, and an automated lead-generation chatbot.</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.1em;color:var(--faint)">NEXT.JS · PRISMA · NEON · MANYCHAT</span>
+</div>
+<div data-reveal data-layer data-delay="120" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:10px clamp(14px,2.4vw,40px);padding:clamp(18px,2vw,26px) 0;border-top:1px solid var(--line);transition:background .4s ease,padding-left .4s ease">
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);flex:0 0 92px">2024 — 2025</span>
+<span style="flex:0 0 auto;font-size:clamp(19px,2.1vw,30px);letter-spacing:-.02em;font-weight:500">eCommerce</span>
+<span style="flex:1 1 min(100%,300px);font-size:14px;line-height:1.6;color:var(--dim);font-weight:300">Fullstack Developer, freelance — microservices e-commerce with SOLID principles and collaborative Git workflows.</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.1em;color:var(--faint)">NEXT.JS · NESTJS · GRAPHQL · SQL</span>
+</div>
+<div data-reveal data-layer data-delay="180" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:10px clamp(14px,2.4vw,40px);padding:clamp(18px,2vw,26px) 0;border-top:1px solid var(--line);transition:background .4s ease,padding-left .4s ease">
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);flex:0 0 92px">2022 — 2023</span>
+<span style="flex:0 0 auto;font-size:clamp(19px,2.1vw,30px);letter-spacing:-.02em;font-weight:500">Jobgether</span>
+<span style="flex:1 1 min(100%,300px);font-size:14px;line-height:1.6;color:var(--dim);font-weight:300">Web Developer — features for an international job platform, working under Scrum in a distributed team.</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.1em;color:var(--faint)">VUE.JS 3 · NUXT.JS · PINIA</span>
+</div>
+<div data-reveal data-layer data-delay="240" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:10px clamp(14px,2.4vw,40px);padding:clamp(18px,2vw,26px) 0;border-top:1px solid var(--line);transition:background .4s ease,padding-left .4s ease">
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);flex:0 0 92px">2021 — 2022</span>
+<span style="flex:0 0 auto;font-size:clamp(19px,2.1vw,30px);letter-spacing:-.02em;font-weight:500">Colegium</span>
+<span style="flex:1 1 min(100%,300px);font-size:14px;line-height:1.6;color:var(--dim);font-weight:300">Fullstack Developer — education platforms used by schools across Chile, with cross-browser compatibility.</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.1em;color:var(--faint)">VUE.JS · JQUERY · SASS</span>
+</div>
+<div data-reveal data-layer data-delay="300" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:10px clamp(14px,2.4vw,40px);padding:clamp(18px,2vw,26px) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .4s ease,padding-left .4s ease">
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);flex:0 0 92px">2020 — 2021</span>
+<span style="flex:0 0 auto;font-size:clamp(19px,2.1vw,30px);letter-spacing:-.02em;font-weight:500">Market Mix</span>
+<span style="flex:1 1 min(100%,300px);font-size:14px;line-height:1.6;color:var(--dim);font-weight:300">Frontend &amp; Mobile Developer — interfaces for e-commerce, delivery and contact-center platforms, plus hybrid mobile apps.</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.1em;color:var(--faint)">VUE.JS · ANGULAR · IONIC · TYPESCRIPT</span>
+</div>
+</div>
+</section>
+
+<section id="case" data-screen-label="02 Case study" style="padding:clamp(56px,8vw,140px) clamp(18px,3.6vw,56px);border-top:1px solid var(--line);background:var(--panel)">
+<div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between;margin-bottom:clamp(40px,5vw,80px)">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.2em;color:var(--acc);margin-bottom:18px">SECTION 02 / CASE STUDY</div>
+<h2 data-reveal style="margin:0;font-size:clamp(38px,6.4vw,104px);line-height:.9;letter-spacing:-.03em;font-weight:600">TIKARIY</h2>
+</div>
+<div style="display:flex;gap:clamp(18px,2.4vw,40px);flex-wrap:wrap;font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint)">
+<span>E-COMMERCE</span><span>JAN 2026 — PRESENT</span><span>IN PRODUCTION</span>
+</div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:clamp(28px,4vw,64px);padding-bottom:clamp(36px,4.5vw,64px);border-bottom:1px solid var(--line)">
+<div data-reveal style="flex:1 1 min(100%,420px);min-width:0">
+<div style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.18em;color:var(--acc);margin-bottom:20px">THE CHALLENGE</div>
+<p style="margin:0 0 18px;font-size:clamp(18px,1.9vw,26px);line-height:1.45;font-weight:400;letter-spacing:-.01em">An educational toy brand was selling through WhatsApp messages and a spreadsheet. Orders were lost, stock was guesswork, and every invoice was written by hand.</p>
+<p style="margin:0;font-size:15px;line-height:1.7;color:var(--dim);font-weight:300">The platform had to replace that process without losing the conversational sales channel the business depended on. That meant a real catalog, real payments, automatic invoicing, and an admin surface non-technical staff could operate on the first day — all delivered by one developer on a fixed timeline.</p>
+</div>
+<div data-reveal data-delay="120" style="flex:1 1 min(100%,300px);min-width:0">
+<div style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.18em;color:var(--acc);margin-bottom:20px">MY ROLE</div>
+<div style="display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--line)"><span style="font-size:14px;font-weight:500">Architecture</span><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);letter-spacing:.1em">END TO END</span></div>
+<div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--line)"><span style="font-size:14px;font-weight:500">Backend &amp; API design</span><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);letter-spacing:.1em">NESTJS · GRAPHQL</span></div>
+<div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--line)"><span style="font-size:14px;font-weight:500">Frontend &amp; UI</span><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);letter-spacing:.1em">NEXT.JS</span></div>
+<div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--line)"><span style="font-size:14px;font-weight:500">Database &amp; schema</span><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);letter-spacing:.1em">POSTGRESQL · TYPEORM</span></div>
+<div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--line)"><span style="font-size:14px;font-weight:500">Integrations</span><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);letter-spacing:.1em">PAYMENTS · WHATSAPP</span></div>
+<div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><span style="font-size:14px;font-weight:500">Deployment</span><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);letter-spacing:.1em">VERCEL · RAILWAY</span></div>
+</div>
+</div>
+</div>
+
+<div style="padding:clamp(40px,5vw,80px) 0;border-bottom:1px solid var(--line)">
+<div style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.18em;color:var(--acc);margin-bottom:clamp(28px,3.4vw,48px)">THE ARCHITECTURE</div>
+<div style="display:flex;flex-direction:column;gap:0">
+<div data-reveal data-layer style="display:flex;flex-wrap:wrap;align-items:baseline;gap:clamp(12px,2vw,32px);padding:clamp(18px,2.2vw,30px) 0;border-top:1px solid var(--line);transition:background .4s ease,padding-left .4s ease">
+<span style="font-family:'Poppins',sans-serif;font-size:10px;color:var(--acc);flex:0 0 34px">01</span>
+<span style="flex:1 1 min(100%,240px);font-size:clamp(24px,3vw,44px);letter-spacing:-.02em;font-weight:500">Next.js</span>
+<span style="flex:1 1 min(100%,220px);font-size:13.5px;line-height:1.6;color:var(--dim);font-weight:300">Server-rendered storefront. Catalog and product pages cached at the edge, cart state on the client.</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)">PRESENTATION</span>
+</div>
+<div data-reveal data-layer data-delay="80" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:clamp(12px,2vw,32px);padding:clamp(18px,2.2vw,30px) 0;border-top:1px solid var(--line);transition:background .4s ease,padding-left .4s ease">
+<span style="font-family:'Poppins',sans-serif;font-size:10px;color:var(--acc);flex:0 0 34px">02</span>
+<span style="flex:1 1 min(100%,240px);font-size:clamp(24px,3vw,44px);letter-spacing:-.02em;font-weight:500">GraphQL</span>
+<span style="flex:1 1 min(100%,220px);font-size:13.5px;line-height:1.6;color:var(--dim);font-weight:300">One typed contract between client and server. Generated types remove the guesswork at the boundary.</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)">CONTRACT</span>
+</div>
+<div data-reveal data-layer data-delay="160" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:clamp(12px,2vw,32px);padding:clamp(18px,2.2vw,30px) 0;border-top:1px solid var(--line);transition:background .4s ease,padding-left .4s ease">
+<span style="font-family:'Poppins',sans-serif;font-size:10px;color:var(--acc);flex:0 0 34px">03</span>
+<span style="flex:1 1 min(100%,240px);font-size:clamp(24px,3vw,44px);letter-spacing:-.02em;font-weight:500">NestJS</span>
+<span style="flex:1 1 min(100%,220px);font-size:13.5px;line-height:1.6;color:var(--dim);font-weight:300">Modules per domain — catalog, orders, billing, auth. Business rules live here, never in the UI.</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)">DOMAIN</span>
+</div>
+<div data-reveal data-layer data-delay="240" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:clamp(12px,2vw,32px);padding:clamp(18px,2.2vw,30px) 0;border-top:1px solid var(--line);transition:background .4s ease,padding-left .4s ease">
+<span style="font-family:'Poppins',sans-serif;font-size:10px;color:var(--acc);flex:0 0 34px">04</span>
+<span style="flex:1 1 min(100%,240px);font-size:clamp(24px,3vw,44px);letter-spacing:-.02em;font-weight:500">PostgreSQL</span>
+<span style="flex:1 1 min(100%,220px);font-size:13.5px;line-height:1.6;color:var(--dim);font-weight:300">Normalized schema with constraints doing real work: orders and inventory cannot disagree.</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)">STATE</span>
+</div>
+<div data-reveal data-layer data-delay="320" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:clamp(12px,2vw,32px);padding:clamp(18px,2.2vw,30px) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .4s ease,padding-left .4s ease">
+<span style="font-family:'Poppins',sans-serif;font-size:10px;color:var(--acc);flex:0 0 34px">05</span>
+<span style="flex:1 1 min(100%,240px);font-size:clamp(24px,3vw,44px);letter-spacing:-.02em;font-weight:500">Cloud &amp; Integrations</span>
+<span style="flex:1 1 min(100%,220px);font-size:13.5px;line-height:1.6;color:var(--dim);font-weight:300">Cloudinary for media, Wompi payments, Siigo e-invoicing for DIAN, WhatsApp handoff. Deployed on Vercel and Railway.</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)">EDGE</span>
+</div>
+</div>
+</div>
+
+<div style="padding:clamp(40px,5vw,80px) 0;border-bottom:1px solid var(--line)">
+<div style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.18em;color:var(--acc);margin-bottom:clamp(24px,3vw,40px)">KEY FEATURES</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line)">
+<div style="background:var(--panel);padding:24px 20px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint)">01</span><div style="margin-top:14px;font-size:clamp(15px,1.3vw,18px);font-weight:500">Product catalog</div></div>
+<div style="background:var(--panel);padding:24px 20px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint)">02</span><div style="margin-top:14px;font-size:clamp(15px,1.3vw,18px);font-weight:500">Authentication</div></div>
+<div style="background:var(--panel);padding:24px 20px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint)">03</span><div style="margin-top:14px;font-size:clamp(15px,1.3vw,18px);font-weight:500">Shopping cart</div></div>
+<div style="background:var(--panel);padding:24px 20px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint)">04</span><div style="margin-top:14px;font-size:clamp(15px,1.3vw,18px);font-weight:500">Payments</div></div>
+<div style="background:var(--panel);padding:24px 20px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint)">05</span><div style="margin-top:14px;font-size:clamp(15px,1.3vw,18px);font-weight:500">Invoice generation</div></div>
+<div style="background:var(--panel);padding:24px 20px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint)">06</span><div style="margin-top:14px;font-size:clamp(15px,1.3vw,18px);font-weight:500">WhatsApp integration</div></div>
+<div style="background:var(--panel);padding:24px 20px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint)">07</span><div style="margin-top:14px;font-size:clamp(15px,1.3vw,18px);font-weight:500">Admin dashboard</div></div>
+<div style="background:var(--panel);padding:24px 20px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint)">08</span><div style="margin-top:14px;font-size:clamp(15px,1.3vw,18px);font-weight:500">Product management</div></div>
+</div>
+</div>
+
+<div style="padding-top:clamp(40px,5vw,80px)">
+<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:baseline;justify-content:space-between;margin-bottom:clamp(24px,3vw,40px)">
+<div style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.18em;color:var(--acc)">ENGINEERING DECISIONS</div>
+<div style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)">EXPAND TO READ THE REASONING</div>
+</div>
+<div data-accordion>
+<div style="border-top:1px solid var(--line)">
+<button type="button" onClick="{{ toggle }}" style="width:100%;display:flex;align-items:baseline;gap:20px;padding:clamp(22px,2.4vw,32px) 0;background:none;border:0;color:var(--ink);cursor:pointer;text-align:left;font-family:inherit;transition:color .35s ease" style-hover="color:var(--acc)">
+<span style="font-family:'Poppins',sans-serif;font-size:10px;color:var(--faint)">D1</span>
+<span style="flex:1;font-size:clamp(20px,2.4vw,34px);letter-spacing:-.015em;font-weight:500">Why GraphQL?</span>
+<span data-sign style="font-family:'Poppins',sans-serif;font-size:16px;transition:transform .4s cubic-bezier(.16,1,.3,1)">+</span>
+</button>
+<div data-panel style="max-height:0;overflow:hidden;opacity:0;transition:max-height .6s cubic-bezier(.16,1,.3,1),opacity .5s ease">
+<div style="display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,56px);padding:0 0 clamp(26px,3vw,40px) 34px">
+<p style="margin:0;flex:1 1 min(100%,320px);font-size:15px;line-height:1.7;color:var(--dim);font-weight:300">The storefront, the cart and the admin dashboard need overlapping but different slices of the same data. With REST that meant either three sets of endpoints or over-fetching everywhere. A single typed schema let each surface ask for exactly what it renders, and code generation turned that schema into TypeScript types on both sides — so a field rename breaks the build instead of the checkout.</p>
+<p style="margin:0;flex:1 1 min(100%,240px);font-size:13.5px;line-height:1.7;color:var(--faint);font-weight:300"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--acc);display:block;margin-bottom:12px">TRADE-OFF</span>Caching is harder than with plain HTTP endpoints. Persisted queries and per-resolver caching handled the hot paths; the rest was measured before it was optimized.</p>
+</div>
+</div>
+</div>
+<div style="border-top:1px solid var(--line)">
+<button type="button" onClick="{{ toggle }}" style="width:100%;display:flex;align-items:baseline;gap:20px;padding:clamp(22px,2.4vw,32px) 0;background:none;border:0;color:var(--ink);cursor:pointer;text-align:left;font-family:inherit;transition:color .35s ease" style-hover="color:var(--acc)">
+<span style="font-family:'Poppins',sans-serif;font-size:10px;color:var(--faint)">D2</span>
+<span style="flex:1;font-size:clamp(20px,2.4vw,34px);letter-spacing:-.015em;font-weight:500">Why PostgreSQL?</span>
+<span data-sign style="font-family:'Poppins',sans-serif;font-size:16px;transition:transform .4s cubic-bezier(.16,1,.3,1)">+</span>
+</button>
+<div data-panel style="max-height:0;overflow:hidden;opacity:0;transition:max-height .6s cubic-bezier(.16,1,.3,1),opacity .5s ease">
+<div style="display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,56px);padding:0 0 clamp(26px,3vw,40px) 34px">
+<p style="margin:0;flex:1 1 min(100%,320px);font-size:15px;line-height:1.7;color:var(--dim);font-weight:300">Commerce is a relational problem. Orders reference products, prices reference currencies, invoices reference orders, and none of those relationships may drift. Postgres gives transactions, foreign keys and check constraints, so the invariants that matter to the business are enforced by the database rather than by hope and application code.</p>
+<p style="margin:0;flex:1 1 min(100%,240px);font-size:13.5px;line-height:1.7;color:var(--faint);font-weight:300"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--acc);display:block;margin-bottom:12px">DETAIL</span>Money is stored as integer minor units. Product attributes that vary by category live in JSONB, which keeps the core tables narrow without giving up query power.</p>
+</div>
+</div>
+</div>
+<div style="border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<button type="button" onClick="{{ toggle }}" style="width:100%;display:flex;align-items:baseline;gap:20px;padding:clamp(22px,2.4vw,32px) 0;background:none;border:0;color:var(--ink);cursor:pointer;text-align:left;font-family:inherit;transition:color .35s ease" style-hover="color:var(--acc)">
+<span style="font-family:'Poppins',sans-serif;font-size:10px;color:var(--faint)">D3</span>
+<span style="flex:1;font-size:clamp(20px,2.4vw,34px);letter-spacing:-.015em;font-weight:500">How the architecture evolved</span>
+<span data-sign style="font-family:'Poppins',sans-serif;font-size:16px;transition:transform .4s cubic-bezier(.16,1,.3,1)">+</span>
+</button>
+<div data-panel style="max-height:0;overflow:hidden;opacity:0;transition:max-height .6s cubic-bezier(.16,1,.3,1),opacity .5s ease">
+<div style="display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,56px);padding:0 0 clamp(26px,3vw,40px) 34px">
+<p style="margin:0;flex:1 1 min(100%,320px);font-size:15px;line-height:1.7;color:var(--dim);font-weight:300">Version one was a single Next.js app talking straight to the database. It shipped fast and taught me where the real complexity was: pricing, stock and invoicing. Those rules kept leaking into route handlers, so the domain moved into a NestJS service with its own modules, and the frontend became a client of a contract instead of an owner of business logic.</p>
+<p style="margin:0;flex:1 1 min(100%,240px);font-size:13.5px;line-height:1.7;color:var(--faint);font-weight:300"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--acc);display:block;margin-bottom:12px">RESULT</span>The admin dashboard was added later against the same API, with no changes to the storefront. That is the test I use for whether a boundary was drawn in the right place.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="engineering" data-screen-label="03 How I build" style="padding:clamp(56px,8vw,140px) clamp(18px,3.6vw,56px);border-top:1px solid var(--line)">
+<div style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.2em;color:var(--acc);margin-bottom:18px">SECTION 03</div>
+<div style="display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,64px);align-items:flex-end;margin-bottom:clamp(40px,5vw,88px)">
+<h2 data-reveal style="margin:0;flex:1 1 min(100%,380px);font-size:clamp(38px,6.4vw,104px);line-height:.9;letter-spacing:-.03em;font-weight:600">HOW I BUILD</h2>
+<p data-reveal data-delay="100" style="margin:0;flex:1 1 min(100%,300px);max-width:40ch;font-size:clamp(17px,1.7vw,24px);line-height:1.45;font-weight:300;letter-spacing:-.01em">I don't just write code. I design systems around the problem.</p>
+</div>
+<div style="display:flex;flex-direction:column">
+<div data-reveal data-principle style="display:flex;flex-wrap:wrap;gap:clamp(16px,3vw,56px);padding:clamp(28px,3.4vw,52px) 0;border-top:1px solid var(--line);transition:padding-left .5s cubic-bezier(.16,1,.3,1)">
+<span style="flex:0 0 auto;font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:.14em;color:var(--faint);padding-top:10px">01</span>
+<h3 style="margin:0;flex:1 1 min(100%,300px);font-size:clamp(28px,3.8vw,60px);line-height:.98;letter-spacing:-.025em;font-weight:600">ARCHITECTURE</h3>
+<p style="margin:0;flex:1 1 min(100%,280px);max-width:44ch;font-size:15px;line-height:1.7;color:var(--dim);font-weight:300">Design systems around maintainability, scalability and clear separation of concerns.</p>
+</div>
+<div data-reveal data-principle data-delay="80" style="display:flex;flex-wrap:wrap;gap:clamp(16px,3vw,56px);padding:clamp(28px,3.4vw,52px) 0;border-top:1px solid var(--line);transition:padding-left .5s cubic-bezier(.16,1,.3,1)">
+<span style="flex:0 0 auto;font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:.14em;color:var(--faint);padding-top:10px">02</span>
+<h3 style="margin:0;flex:1 1 min(100%,300px);font-size:clamp(28px,3.8vw,60px);line-height:.98;letter-spacing:-.025em;font-weight:600">TYPE SAFETY</h3>
+<p style="margin:0;flex:1 1 min(100%,280px);max-width:44ch;font-size:15px;line-height:1.7;color:var(--dim);font-weight:300">Use TypeScript to create reliable contracts and reduce complexity.</p>
+</div>
+<div data-reveal data-principle data-delay="160" style="display:flex;flex-wrap:wrap;gap:clamp(16px,3vw,56px);padding:clamp(28px,3.4vw,52px) 0;border-top:1px solid var(--line);transition:padding-left .5s cubic-bezier(.16,1,.3,1)">
+<span style="flex:0 0 auto;font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:.14em;color:var(--faint);padding-top:10px">03</span>
+<h3 style="margin:0;flex:1 1 min(100%,300px);font-size:clamp(28px,3.8vw,60px);line-height:.98;letter-spacing:-.025em;font-weight:600">PERFORMANCE</h3>
+<p style="margin:0;flex:1 1 min(100%,280px);max-width:44ch;font-size:15px;line-height:1.7;color:var(--dim);font-weight:300">Think about rendering, data fetching, database queries, assets and runtime performance.</p>
+</div>
+<div data-reveal data-principle data-delay="240" style="display:flex;flex-wrap:wrap;gap:clamp(16px,3vw,56px);padding:clamp(28px,3.4vw,52px) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);transition:padding-left .5s cubic-bezier(.16,1,.3,1)">
+<span style="flex:0 0 auto;font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:.14em;color:var(--faint);padding-top:10px">04</span>
+<h3 style="margin:0;flex:1 1 min(100%,300px);font-size:clamp(28px,3.8vw,60px);line-height:.98;letter-spacing:-.025em;font-weight:600">PRODUCT THINKING</h3>
+<p style="margin:0;flex:1 1 min(100%,280px);max-width:44ch;font-size:15px;line-height:1.7;color:var(--dim);font-weight:300">Technical decisions should serve the product and the people using it.</p>
+</div>
+</div>
+</section>
+
+<section data-screen-label="04 Technology" style="padding:clamp(56px,8vw,130px) clamp(18px,3.6vw,56px);border-top:1px solid var(--line);background:var(--panel)">
+<div style="display:flex;flex-wrap:wrap;gap:24px;align-items:baseline;justify-content:space-between;margin-bottom:clamp(36px,4.5vw,72px)">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.2em;color:var(--acc);margin-bottom:18px">SECTION 04</div>
+<h2 data-reveal style="margin:0;font-size:clamp(32px,4.6vw,76px);line-height:.92;letter-spacing:-.03em;font-weight:600">TECHNOLOGY</h2>
+</div>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint)">TOOLS I REACH FOR, NOT A SCORE SHEET</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(24px,3vw,48px)">
+<div data-reveal>
+<div style="display:flex;align-items:baseline;gap:10px;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:22px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--acc)">/01</span><span style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.16em;color:var(--dim)">FRONTEND</span></div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">TypeScript</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">React</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">Next.js</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">Vue.js 3 · Nuxt.js</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">Tailwind CSS</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">shadcn/ui</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">Framer Motion</span>
+</div>
+</div>
+<div data-reveal data-delay="80">
+<div style="display:flex;align-items:baseline;gap:10px;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:22px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--acc)">/02</span><span style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.16em;color:var(--dim)">BACKEND</span></div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">Node.js</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">NestJS</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">Express.js</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">GraphQL</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">REST</span>
+</div>
+</div>
+<div data-reveal data-delay="160">
+<div style="display:flex;align-items:baseline;gap:10px;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:22px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--acc)">/03</span><span style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.16em;color:var(--dim)">DATA</span></div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">PostgreSQL</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">MySQL</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">TypeORM</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">Prisma</span>
+</div>
+</div>
+<div data-reveal data-delay="240">
+<div style="display:flex;align-items:baseline;gap:10px;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:22px"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--acc)">/04</span><span style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.16em;color:var(--dim)">INFRASTRUCTURE</span></div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">Vercel</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">Railway</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">Neon · Cloudinary</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">Git</span>
+<span data-tech style="font-size:clamp(17px,1.7vw,23px);letter-spacing:-.01em;font-weight:400;color:var(--ink);transition:color .3s ease,transform .4s cubic-bezier(.16,1,.3,1);cursor:default">Linux</span>
+</div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="05 Currently exploring" style="padding:clamp(56px,8vw,130px) clamp(18px,3.6vw,56px);border-top:1px solid var(--line)">
+<div style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.2em;color:var(--acc);margin-bottom:18px">SECTION 05</div>
+<div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between;margin-bottom:clamp(36px,4.5vw,72px)">
+<h2 data-reveal style="margin:0;font-size:clamp(32px,4.8vw,80px);line-height:.92;letter-spacing:-.03em;font-weight:600">CURRENTLY EXPLORING</h2>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint)">2025 → ONGOING</span>
+</div>
+<div style="position:relative;display:flex;flex-wrap:wrap;gap:1px;background:var(--line)">
+<div data-reveal style="flex:1 1 min(100%,190px);background:var(--bg);padding:clamp(24px,2.6vw,36px) clamp(18px,2vw,28px);display:flex;flex-direction:column;gap:clamp(26px,3vw,44px)">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:9px;height:9px;border-radius:50%;background:var(--acc)"></span><span style="height:1px;flex:1;background:var(--line)"></span></div>
+<div><div style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint);margin-bottom:12px">IN PROGRESS</div><div style="font-size:clamp(17px,1.6vw,22px);line-height:1.2;font-weight:500;letter-spacing:-.01em">Data Structures &amp; Algorithms</div><p style="margin:12px 0 0;font-size:13px;line-height:1.6;color:var(--dim);font-weight:300">Daily practice. Complexity as a habit of thought, not interview trivia.</p></div>
+</div>
+<div data-reveal data-delay="80" style="flex:1 1 min(100%,190px);background:var(--bg);padding:clamp(24px,2.6vw,36px) clamp(18px,2vw,28px);display:flex;flex-direction:column;gap:clamp(26px,3vw,44px)">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:9px;height:9px;border-radius:50%;background:var(--acc);opacity:.75"></span><span style="height:1px;flex:1;background:var(--line)"></span></div>
+<div><div style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint);margin-bottom:12px">IN PROGRESS</div><div style="font-size:clamp(17px,1.6vw,22px);line-height:1.2;font-weight:500;letter-spacing:-.01em">System Design</div><p style="margin:12px 0 0;font-size:13px;line-height:1.6;color:var(--dim);font-weight:300">Queues, caching layers and failure modes at a scale beyond one product.</p></div>
+</div>
+<div data-reveal data-delay="160" style="flex:1 1 min(100%,190px);background:var(--bg);padding:clamp(24px,2.6vw,36px) clamp(18px,2vw,28px);display:flex;flex-direction:column;gap:clamp(26px,3vw,44px)">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:9px;height:9px;border-radius:50%;background:var(--acc);opacity:.5"></span><span style="height:1px;flex:1;background:var(--line)"></span></div>
+<div><div style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint);margin-bottom:12px">DEEPENING</div><div style="font-size:clamp(17px,1.6vw,22px);line-height:1.2;font-weight:500;letter-spacing:-.01em">Advanced TypeScript</div><p style="margin:12px 0 0;font-size:13px;line-height:1.6;color:var(--dim);font-weight:300">Generics and inference used to make wrong states unrepresentable.</p></div>
+</div>
+<div data-reveal data-delay="240" style="flex:1 1 min(100%,190px);background:var(--bg);padding:clamp(24px,2.6vw,36px) clamp(18px,2vw,28px);display:flex;flex-direction:column;gap:clamp(26px,3vw,44px)">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:9px;height:9px;border-radius:50%;border:1px solid var(--faint)"></span><span style="height:1px;flex:1;background:var(--line)"></span></div>
+<div><div style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint);margin-bottom:12px">NEXT</div><div style="font-size:clamp(17px,1.6vw,22px);line-height:1.2;font-weight:500;letter-spacing:-.01em">Three.js</div><p style="margin:12px 0 0;font-size:13px;line-height:1.6;color:var(--dim);font-weight:300">Geometry, materials and render cost in the browser.</p></div>
+</div>
+<div data-reveal data-delay="320" style="flex:1 1 min(100%,190px);background:var(--bg);padding:clamp(24px,2.6vw,36px) clamp(18px,2vw,28px);display:flex;flex-direction:column;gap:clamp(26px,3vw,44px)">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:9px;height:9px;border-radius:50%;border:1px solid var(--faint)"></span></div>
+<div><div style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint);margin-bottom:12px">NEXT</div><div style="font-size:clamp(17px,1.6vw,22px);line-height:1.2;font-weight:500;letter-spacing:-.01em">3D Web Experiences</div><p style="margin:12px 0 0;font-size:13px;line-height:1.6;color:var(--dim);font-weight:300">Interfaces where space carries meaning, kept fast on mid-range devices.</p></div>
+</div>
+</div>
+</section>
+
+<section id="about" data-screen-label="06 About" style="padding:clamp(56px,8vw,140px) clamp(18px,3.6vw,56px);border-top:1px solid var(--line);background:var(--panel)">
+<div style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.2em;color:var(--acc);margin-bottom:clamp(28px,3.4vw,48px)">SECTION 06 / ABOUT</div>
+<div style="display:flex;flex-wrap:wrap;gap:clamp(28px,4.5vw,80px)">
+<div data-reveal style="flex:1 1 min(100%,460px);min-width:0">
+<p style="margin:0 0 clamp(22px,2.4vw,32px);font-size:clamp(22px,2.9vw,44px);line-height:1.24;letter-spacing:-.02em;font-weight:400">I started writing software because I wanted to understand how ideas become products.</p>
+<p style="margin:0 0 18px;max-width:58ch;font-size:15px;line-height:1.75;color:var(--dim);font-weight:300">That curiosity turned into a practice. I started in 2020 building interfaces for e-commerce, delivery and contact-center products, and the pattern repeated: the interesting part was never the framework, it was the gap between what someone needed and what a system actually did.</p>
+<p style="margin:0;max-width:58ch;font-size:15px;line-height:1.75;color:var(--dim);font-weight:300">Since then I have worked across the whole stack, taking products from a first schema to a deployed URL. I like problems where the constraints are real — a business with a deadline, a team without a developer, a process that has outgrown its spreadsheet. I work from Bogotá with international teams, and I care about writing software that stays understandable long after it ships.</p>
+</div>
+<div data-reveal data-delay="120" style="flex:1 1 min(100%,240px);min-width:0">
+<div style="display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-top:1px solid var(--line)"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)">LOCATION</span><span style="font-size:13.5px;font-weight:500">Bogotá, Colombia · UTC−5</span></div>
+<div style="display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-top:1px solid var(--line)"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)">DEVELOPER SINCE</span><span style="font-size:13.5px;font-weight:500">2020 · 4+ years</span></div>
+<div style="display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-top:1px solid var(--line)"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)">CURRENT FOCUS</span><span style="font-size:13.5px;font-weight:500;text-align:right">Full-stack TypeScript<br>product engineering</span></div>
+<div style="display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-top:1px solid var(--line)"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)">EDUCATION</span><span style="font-size:13.5px;font-weight:500;text-align:right">B.Sc. Software Engineering<br>UNIMINUTO · 5th term</span></div>
+<div style="display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-top:1px solid var(--line)"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)">LANGUAGES</span><span style="font-size:13.5px;font-weight:500;text-align:right">Spanish native · English B1</span></div>
+<div style="display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint)">AVAILABILITY</span><span style="font-size:13.5px;font-weight:500;color:var(--acc);text-align:right">Open to international<br>opportunities</span></div>
+<div style="margin-top:26px;border:1px solid var(--line);background:repeating-linear-gradient(122deg,rgba(239,237,233,.045) 0 9px,transparent 9px 20px);aspect-ratio:4/5;display:flex;align-items:flex-end;padding:16px">
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint)">[ PORTRAIT — OPTIONAL ]</span>
+</div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="07 Behind the code" style="padding:clamp(56px,8vw,140px) clamp(18px,3.6vw,56px);border-top:1px solid var(--line)">
+<div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between;margin-bottom:clamp(36px,4.5vw,72px)">
+<div>
+<div style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.2em;color:var(--acc);margin-bottom:18px">SECTION 07</div>
+<h2 data-reveal style="margin:0;font-size:clamp(34px,5.6vw,92px);line-height:.9;letter-spacing:-.03em;font-weight:600">BEHIND THE CODE</h2>
+</div>
+<p data-reveal data-delay="100" style="margin:0;max-width:32ch;font-size:14px;line-height:1.65;color:var(--dim);font-weight:300">Engineering notes — the reasoning behind decisions, written while the work was still fresh.</p>
+</div>
+<div data-accordion>
+<div style="border-top:1px solid var(--line)">
+<button type="button" onClick="{{ toggle }}" style="width:100%;display:flex;flex-wrap:wrap;align-items:baseline;gap:14px clamp(16px,2.4vw,36px);padding:clamp(22px,2.6vw,34px) 0;background:none;border:0;color:var(--ink);cursor:pointer;text-align:left;font-family:inherit;transition:color .35s ease" style-hover="color:var(--acc)">
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint);flex:0 0 78px">NOTE 001</span>
+<span style="flex:1 1 min(100%,260px);font-size:clamp(19px,2.2vw,32px);line-height:1.15;letter-spacing:-.015em;font-weight:500">Why I chose GraphQL for Tikariy</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);letter-spacing:.1em">6 MIN</span>
+<span data-sign style="font-family:'Poppins',sans-serif;font-size:16px;transition:transform .4s cubic-bezier(.16,1,.3,1)">+</span>
+</button>
+<div data-panel style="max-height:0;overflow:hidden;opacity:0;transition:max-height .6s cubic-bezier(.16,1,.3,1),opacity .5s ease">
+<div style="max-width:70ch;padding:0 0 clamp(28px,3vw,44px) clamp(0px,6vw,92px)">
+<p style="margin:0 0 16px;font-size:15px;line-height:1.75;color:var(--dim);font-weight:300">Three clients, one dataset. The storefront wants images and prices, the cart wants stock and totals, the admin wants everything plus audit fields. REST would have meant a set of endpoints per client, or one fat endpoint that nobody could change safely.</p>
+<p style="margin:0;font-size:15px;line-height:1.75;color:var(--dim);font-weight:300">The schema became the shared vocabulary of the project. Once it existed, generated types made the client and the server agree by construction, and adding the admin dashboard cost days rather than weeks. The price is caching discipline and resolver hygiene, which is a price worth paying when the data graph is genuinely a graph.</p>
+</div>
+</div>
+</div>
+<div style="border-top:1px solid var(--line)">
+<button type="button" onClick="{{ toggle }}" style="width:100%;display:flex;flex-wrap:wrap;align-items:baseline;gap:14px clamp(16px,2.4vw,36px);padding:clamp(22px,2.6vw,34px) 0;background:none;border:0;color:var(--ink);cursor:pointer;text-align:left;font-family:inherit;transition:color .35s ease" style-hover="color:var(--acc)">
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint);flex:0 0 78px">NOTE 002</span>
+<span style="flex:1 1 min(100%,260px);font-size:clamp(19px,2.2vw,32px);line-height:1.15;letter-spacing:-.015em;font-weight:500">How I structure a NestJS backend</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);letter-spacing:.1em">8 MIN</span>
+<span data-sign style="font-family:'Poppins',sans-serif;font-size:16px;transition:transform .4s cubic-bezier(.16,1,.3,1)">+</span>
+</button>
+<div data-panel style="max-height:0;overflow:hidden;opacity:0;transition:max-height .6s cubic-bezier(.16,1,.3,1),opacity .5s ease">
+<div style="max-width:70ch;padding:0 0 clamp(28px,3vw,44px) clamp(0px,6vw,92px)">
+<p style="margin:0 0 16px;font-size:15px;line-height:1.75;color:var(--dim);font-weight:300">One module per domain concept, not per technical layer. Catalog, orders, billing and auth each own their entities, services and resolvers, and expose a small surface to the rest of the app. Controllers and resolvers stay thin: they validate input and delegate.</p>
+<p style="margin:0;font-size:15px;line-height:1.75;color:var(--dim);font-weight:300">The rule I hold to is that a module may depend on an interface but never on another module's internals. It makes the boring changes boring, and it makes the interesting ones — a new payment provider, a second storefront — local instead of structural.</p>
+</div>
+</div>
+</div>
+<div style="border-top:1px solid var(--line)">
+<button type="button" onClick="{{ toggle }}" style="width:100%;display:flex;flex-wrap:wrap;align-items:baseline;gap:14px clamp(16px,2.4vw,36px);padding:clamp(22px,2.6vw,34px) 0;background:none;border:0;color:var(--ink);cursor:pointer;text-align:left;font-family:inherit;transition:color .35s ease" style-hover="color:var(--acc)">
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint);flex:0 0 78px">NOTE 003</span>
+<span style="flex:1 1 min(100%,260px);font-size:clamp(19px,2.2vw,32px);line-height:1.15;letter-spacing:-.015em;font-weight:500">Designing scalable PostgreSQL schemas</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);letter-spacing:.1em">7 MIN</span>
+<span data-sign style="font-family:'Poppins',sans-serif;font-size:16px;transition:transform .4s cubic-bezier(.16,1,.3,1)">+</span>
+</button>
+<div data-panel style="max-height:0;overflow:hidden;opacity:0;transition:max-height .6s cubic-bezier(.16,1,.3,1),opacity .5s ease">
+<div style="max-width:70ch;padding:0 0 clamp(28px,3vw,44px) clamp(0px,6vw,92px)">
+<p style="margin:0 0 16px;font-size:15px;line-height:1.75;color:var(--dim);font-weight:300">Start from the invariants. Which two rows must never contradict each other? Those relationships become foreign keys and check constraints before any code is written, because the database is the last place a bug can be caught cheaply.</p>
+<p style="margin:0;font-size:15px;line-height:1.75;color:var(--dim);font-weight:300">After that it is measurement: read the query plans, index the paths the product actually walks, and keep hot tables narrow. Flexible attributes go in JSONB, money in integers, timestamps in UTC. Most scaling problems I have met were schema problems wearing a performance costume.</p>
+</div>
+</div>
+</div>
+<div style="border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<button type="button" onClick="{{ toggle }}" style="width:100%;display:flex;flex-wrap:wrap;align-items:baseline;gap:14px clamp(16px,2.4vw,36px);padding:clamp(22px,2.6vw,34px) 0;background:none;border:0;color:var(--ink);cursor:pointer;text-align:left;font-family:inherit;transition:color .35s ease" style-hover="color:var(--acc)">
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--faint);flex:0 0 78px">NOTE 004</span>
+<span style="flex:1 1 min(100%,260px);font-size:clamp(19px,2.2vw,32px);line-height:1.15;letter-spacing:-.015em;font-weight:500">What I learned building a real e-commerce platform</span>
+<span style="font-family:'Poppins',sans-serif;font-size:10.5px;color:var(--faint);letter-spacing:.1em">5 MIN</span>
+<span data-sign style="font-family:'Poppins',sans-serif;font-size:16px;transition:transform .4s cubic-bezier(.16,1,.3,1)">+</span>
+</button>
+<div data-panel style="max-height:0;overflow:hidden;opacity:0;transition:max-height .6s cubic-bezier(.16,1,.3,1),opacity .5s ease">
+<div style="max-width:70ch;padding:0 0 clamp(28px,3vw,44px) clamp(0px,6vw,92px)">
+<p style="margin:0 0 16px;font-size:15px;line-height:1.75;color:var(--dim);font-weight:300">The checkout is the easy part. The hard parts are the states around it: a payment that succeeded while the browser closed, stock reserved for a cart nobody returns to, an invoice that must exist exactly once. Commerce is a study in idempotency.</p>
+<p style="margin:0;font-size:15px;line-height:1.75;color:var(--dim);font-weight:300">The other lesson was about people. The admin dashboard decided whether the platform was adopted at all, and no amount of backend elegance would have compensated for a confusing product form. Shipping software means shipping the part someone has to use every morning.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" data-screen-label="08 Contact" style="padding:clamp(64px,9vw,160px) clamp(18px,3.6vw,56px) clamp(36px,4vw,56px);border-top:1px solid var(--line);background:var(--panel)">
+<div style="font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.2em;color:var(--acc);margin-bottom:clamp(28px,3.4vw,48px)">SECTION 08 / CONTACT</div>
+<h2 data-reveal style="margin:0;font-size:clamp(46px,9.4vw,168px);line-height:.86;letter-spacing:-.04em;font-weight:600">LET'S BUILD<br>SOMETHING<br><span style="color:var(--acc)">USEFUL.</span></h2>
+<p data-reveal data-delay="120" style="margin:clamp(28px,3.4vw,48px) 0 clamp(28px,3.4vw,44px);max-width:46ch;font-size:clamp(15px,1.3vw,19px);line-height:1.6;color:var(--dim);font-weight:300">Open to software engineering opportunities, freelance projects and collaborations.</p>
+<div data-reveal data-delay="180" style="display:flex;flex-wrap:wrap;gap:12px;padding-bottom:clamp(48px,6vw,96px)">
+<a href="mailto:naitsirc1101@gmail.com" data-magnet style="display:inline-flex;align-items:center;gap:12px;padding:17px 28px;background:var(--ink);color:#0B0B0C;font-size:11.5px;font-weight:600;letter-spacing:.14em;transition:background .35s ease,transform .3s cubic-bezier(.16,1,.3,1)" style-hover="background:var(--acc)">EMAIL ME<span style="font-family:'Poppins',sans-serif">→</span></a>
+<a href="https://www.linkedin.com/in/cristian-bohorquez-717764183" target="_blank" rel="noopener" data-magnet style="display:inline-flex;align-items:center;gap:12px;padding:17px 28px;border:1px solid var(--line);font-size:11.5px;font-weight:600;letter-spacing:.14em;transition:border-color .35s ease,color .35s ease,transform .3s cubic-bezier(.16,1,.3,1)" style-hover="border-color:var(--acc);color:var(--acc)">LINKEDIN<span style="font-family:'Poppins',sans-serif">→</span></a>
+<a href="https://github.com/GleamTOto" target="_blank" rel="noopener" data-magnet style="display:inline-flex;align-items:center;gap:12px;padding:17px 28px;border:1px solid var(--line);font-size:11.5px;font-weight:600;letter-spacing:.14em;transition:border-color .35s ease,color .35s ease,transform .3s cubic-bezier(.16,1,.3,1)" style-hover="border-color:var(--acc);color:var(--acc)">GITHUB<span style="font-family:'Poppins',sans-serif">→</span></a>
+</div>
+<footer style="display:flex;flex-wrap:wrap;gap:16px 40px;align-items:baseline;justify-content:space-between;padding-top:22px;border-top:1px solid var(--line);font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint)">
+<span style="color:var(--dim)">CRISTIAN BOHÓRQUEZ</span>
+<span>SOFTWARE DEVELOPER</span>
+<span>COLOMBIA / OPEN TO THE WORLD</span>
+<span>+57 320 229 0785</span>
+<span>© 2026</span>
+</footer>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#D8A24A&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#D8A24A&quot;,&quot;#B4FF3A&quot;,&quot;#7DD3C0&quot;,&quot;#8E8BF5&quot;],&quot;section&quot;:&quot;Identity&quot;},&quot;backgroundTone&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Charcoal&quot;,&quot;options&quot;:[&quot;Charcoal&quot;,&quot;Ink&quot;,&quot;Slate&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Full&quot;,&quot;options&quot;:[&quot;Full&quot;,&quot;Restrained&quot;,&quot;Off&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;dotsText&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;CRISTIAN|BOHÓRQUEZ&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero — dot matrix&quot;},&quot;dotsGap&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:4,&quot;min&quot;:3,&quot;max&quot;:14,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero — dot matrix&quot;},&quot;dotSize&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:2,&quot;min&quot;:1,&quot;max&quot;:5,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero — dot matrix&quot;},&quot;echoAlpha&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.8,&quot;min&quot;:0.1,&quot;max&quot;:1,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero — dot matrix&quot;},&quot;repelRadius&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:150,&quot;min&quot;:30,&quot;max&quot;:400,&quot;step&quot;:5,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero — cursor&quot;},&quot;repelCore&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:20,&quot;min&quot;:10,&quot;max&quot;:300,&quot;step&quot;:2,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero — cursor&quot;},&quot;repelForce&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:3,&quot;min&quot;:1,&quot;max&quot;:30,&quot;step&quot;:0.5,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero — cursor&quot;},&quot;springBack&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.013,&quot;min&quot;:0.005,&quot;max&quot;:0.2,&quot;step&quot;:0.002,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero — cursor&quot;},&quot;jitter&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.1,&quot;min&quot;:0,&quot;max&quot;:3,&quot;step&quot;:0.1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero — cursor&quot;},&quot;revealMs&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:1600,&quot;min&quot;:400,&quot;max&quot;:4000,&quot;step&quot;:100,&quot;unit&quot;:&quot;ms&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero — reveal&quot;},&quot;revealSpread&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:200,&quot;min&quot;:40,&quot;max&quot;:600,&quot;step&quot;:10,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero — reveal&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._orig = new Map();
+    this._pending = [];
+    this._onScroll = () => {
+      if (this._rafPend) return;
+      this._rafPend = requestAnimationFrame(() => { this._rafPend = 0; this.checkReveals(); });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('resize', this._onScroll);
+    setTimeout(() => this.checkReveals(), 2500);
+    let saved = 'en';
+    try { saved = localStorage.getItem('cb-lang') === 'es' ? 'es' : 'en'; } catch (e) {}
+    this._lang = saved;
+    this.applyProps();
+    this.sweep();
+    this.timer = setInterval(() => this.sweep(), 500);
+    setTimeout(() => clearInterval(this.timer), 6000);
+    if (!this.reduced && this.motion() === 'Full') this.initCursor();
+  }
+  componentDidUpdate() { this.applyProps(); }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    if (this._onScroll) { window.removeEventListener('scroll', this._onScroll); window.removeEventListener('resize', this._onScroll); }
+    if (this._dots) this._dots.destroy();
+    if (this._cursor) this._cursor.remove();
+    if (this._onMove) window.removeEventListener('mousemove', this._onMove);
+  }
+  motion() { return this.props.motion || 'Full'; }
+  applyProps() {
+    const r = document.documentElement.style;
+    if (this.props.accentColor) r.setProperty('--acc', this.props.accentColor);
+    const tone = this.props.backgroundTone;
+    if (tone === 'Ink') { r.setProperty('--bg', '#08090B'); r.setProperty('--panel', '#0D0F12'); }
+    else if (tone === 'Slate') { r.setProperty('--bg', '#0E1013'); r.setProperty('--panel', '#14171B'); }
+    else if (tone === 'Charcoal') { r.setProperty('--bg', '#0B0B0C'); r.setProperty('--panel', '#101012'); }
+    const p = this.props;
+    const sig = [p.dotsText, p.dotsGap, p.dotSize, p.echoAlpha, p.revealMs, p.revealSpread, p.jitter, p.repelRadius, p.repelCore, p.repelForce, p.springBack].join('|');
+    if (this._dots && sig !== this._sig) {
+      const wrap = document.querySelector('[data-dots]');
+      this._dots.destroy();
+      this._dots = null;
+      if (wrap) { delete wrap.dataset.dt; this.initDots(wrap); }
+    } else if (this._dots) this._dots.resample();
+    this._sig = sig;
+    if (this.props.motion === 'Off') {
+      document.querySelectorAll('[data-pulse]').forEach(el => { el.style.animation = 'none'; el.style.opacity = '0'; });
+    }
+  }
+
+  show(el) {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+    if (this._io) this._io.unobserve(el);
+  }
+
+  /* deterministic fallback: IntersectionObserver can be inert in embedded previews */
+  checkReveals() {
+    if (!this._pending) return;
+    const h = window.innerHeight;
+    this._pending = this._pending.filter(el => {
+      if (!el.isConnected) return false;
+      if (el.style.opacity === '1') return false;
+      if (el.getBoundingClientRect().top < h * 0.92) { this.show(el); return false; }
+      return true;
+    });
+  }
+
+  /* progressively wires elements as the template streams in */
+  sweep() {
+    const once = (el, k) => { if (el.dataset[k]) return false; el.dataset[k] = '1'; return true; };
+    const still = this.reduced || this.motion() === 'Off';
+
+    const dotsWrap = document.querySelector('[data-dots]');
+    if (dotsWrap && once(dotsWrap, 'dt')) this.initDots(dotsWrap);
+
+    if (!still && !this._io) {
+      this._io = new IntersectionObserver(es => es.forEach(e => {
+        if (!e.isIntersecting) return;
+        const d = parseInt(e.target.dataset.delay || '0', 10);
+        setTimeout(() => this.show(e.target), d);
+        this._io.unobserve(e.target);
+      }), { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+    }
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (!once(el, 'rv') || still) return;
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92) { el.style.opacity = '1'; return; }
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.transition = 'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)';
+      el.style.willChange = 'opacity, transform';
+      this._pending.push(el);
+      this._io.observe(el);
+    });
+    this.checkReveals();
+
+    document.querySelectorAll('[data-project]').forEach(el => {
+      if (!once(el, 'pj')) return;
+      el.addEventListener('mouseenter', () => {
+        const img = el.querySelector('[data-img]'), num = el.querySelector('[data-num]'), t = el.querySelector('[data-title]');
+        if (img && !still) img.style.transform = 'scale(1.045)';
+        if (num) num.style.webkitTextStroke = '1px var(--acc)';
+        if (t) t.style.color = 'var(--acc)';
+        const cta = el.querySelector('[data-cta]');
+        if (cta) { cta.style.gap = '18px'; cta.style.color = 'var(--acc)'; }
+        if (this._cursor && el.dataset.label) { this._cursor.textContent = (this._lang === 'es' ? 'VER ' : 'VIEW ') + el.dataset.label; this._cursor.style.opacity = '1'; this._cursor.style.transform += ' scale(1)'; }
+      });
+      el.addEventListener('mouseleave', () => {
+        const img = el.querySelector('[data-img]'), num = el.querySelector('[data-num]'), t = el.querySelector('[data-title]');
+        if (img) img.style.transform = 'none';
+        if (num) num.style.webkitTextStroke = '1px var(--faint)';
+        if (t) t.style.color = 'var(--ink)';
+        const cta = el.querySelector('[data-cta]');
+        if (cta) { cta.style.gap = '10px'; cta.style.color = 'var(--ink)'; }
+        if (this._cursor) this._cursor.style.opacity = '0';
+      });
+    });
+
+    document.querySelectorAll('[data-layer], [data-principle]').forEach(el => {
+      if (!once(el, 'hv')) return;
+      el.addEventListener('mouseenter', () => { el.style.background = 'rgba(239,237,233,.028)'; if (!still) el.style.paddingLeft = '14px'; });
+      el.addEventListener('mouseleave', () => { el.style.background = 'transparent'; el.style.paddingLeft = '0px'; });
+    });
+
+    document.querySelectorAll('[data-tech]').forEach(el => {
+      if (!once(el, 'tc')) return;
+      el.addEventListener('mouseenter', () => { el.style.color = 'var(--acc)'; if (!still) el.style.transform = 'translateX(8px)'; });
+      el.addEventListener('mouseleave', () => { el.style.color = 'var(--ink)'; el.style.transform = 'none'; });
+    });
+
+    document.querySelectorAll('[data-magnet]').forEach(el => {
+      if (!once(el, 'mg') || still) return;
+      el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width / 2) / r.width, y = (e.clientY - r.top - r.height / 2) / r.height;
+        el.style.transform = 'translate(' + (x * 9).toFixed(2) + 'px,' + (y * 6).toFixed(2) + 'px)';
+      });
+      el.addEventListener('mouseleave', () => { el.style.transform = 'none'; });
+    });
+
+    if (this._lang === 'es') this.setLang('es');
+  }
+
+  toggle = e => {
+    const btn = e.currentTarget;
+    const panel = btn.nextElementSibling;
+    const sign = btn.querySelector('[data-sign]');
+    if (!panel) return;
+    const open = panel.dataset.open === '1';
+    const group = btn.closest('[data-accordion]');
+    if (group && !open) {
+      group.querySelectorAll('[data-panel]').forEach(p => {
+        if (p === panel || p.dataset.open !== '1') return;
+        p.dataset.open = '0'; p.style.maxHeight = '0px'; p.style.opacity = '0';
+        const s = p.previousElementSibling && p.previousElementSibling.querySelector('[data-sign]');
+        if (s) s.style.transform = 'none';
+      });
+    }
+    panel.dataset.open = open ? '0' : '1';
+    panel.style.maxHeight = open ? '0px' : panel.scrollHeight + 60 + 'px';
+    panel.style.opacity = open ? '0' : '1';
+    if (sign) sign.style.transform = open ? 'none' : 'rotate(45deg)';
+    btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+  };
+
+  initCursor() {
+    const c = document.createElement('div');
+    c.style.cssText = 'position:fixed;left:0;top:0;z-index:80;pointer-events:none;opacity:0;padding:9px 13px;border-radius:99px;background:var(--acc);color:#0B0B0C;font:600 9.5px/1 "Poppins",sans-serif;letter-spacing:.14em;transition:opacity .3s ease;will-change:transform';
+    document.body.appendChild(c);
+    this._cursor = c;
+    let x = 0, y = 0, tx = 0, ty = 0, raf;
+    this._onMove = e => { tx = e.clientX + 16; ty = e.clientY + 16; if (!raf) raf = requestAnimationFrame(loop); };
+    const loop = () => {
+      x += (tx - x) * 0.18; y += (ty - y) * 0.18;
+      c.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+      raf = Math.abs(tx - x) > 0.4 || Math.abs(ty - y) > 0.4 ? requestAnimationFrame(loop) : null;
+    };
+    window.addEventListener('mousemove', this._onMove, { passive: true });
+  }
+
+  initDots(wrap) {
+    const CONFIG = {
+      TEXT: (this.props.dotsText || 'CRISTIAN|BOHÓRQUEZ').split('|'),
+      GAP: this.props.dotsGap || 6,
+      DOT_SIZE: this.props.dotSize || 2,
+      COLOR_TOP: '#D8A24A',
+      BOTTOM_ALPHA: this.props.echoAlpha == null ? 0.6 : this.props.echoAlpha,
+      FONT_STACK: '"Geist","Arial Narrow",Helvetica,sans-serif',
+      FONT_WEIGHT: 900,
+      TRACKING: 0.09,
+      CONDENSE: 0.92,
+      LINE_H: 0.94,
+      FIT_W: 0.86,
+      FIT_H: 0.34,
+      REVEAL_MS: this.props.revealMs || 1600,
+      REVEAL_STAGGER: 0.55,
+      REVEAL_SPREAD: this.props.revealSpread || 200,
+      JITTER: this.props.jitter == null ? 0.5 : this.props.jitter,
+      REPEL_RADIUS: this.props.repelRadius || 75,
+      REPEL_CORE: this.props.repelCore || 52,
+      REPEL_FORCE: this.props.repelForce || 10,
+      SPRING: this.props.springBack || 0.018,
+      DAMP: 0.96
+    };
+    const cv = wrap.querySelector('[data-dots-canvas]');
+    if (!cv) return;
+    const ctx = cv.getContext('2d', { alpha: true });
+    const reduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches || this.props.motion === 'Off';
+    let W = 0, H = 0, dpr = 1, lines = [[], []], phase = 'reveal', t0 = 0, raf = null, visible = true, awake = true;
+    let mx = -1e4, my = -1e4;
+
+    const accent = () => {
+      const v = getComputedStyle(document.documentElement).getPropertyValue('--acc').trim();
+      return v || CONFIG.COLOR_TOP;
+    };
+    const rgba = (hex, a) => {
+      const h = hex.replace('#', '');
+      const n = h.length === 3 ? h.split('').map(c => c + c).join('') : h;
+      const i = parseInt(n, 16);
+      return 'rgba(' + ((i >> 16) & 255) + ',' + ((i >> 8) & 255) + ',' + (i & 255) + ',' + a + ')';
+    };
+
+    const off = typeof OffscreenCanvas !== 'undefined' ? new OffscreenCanvas(2, 2) : document.createElement('canvas');
+    const sample = () => {
+      const r = wrap.getBoundingClientRect();
+      W = Math.max(1, Math.round(r.width)); H = Math.max(1, Math.round(r.height));
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      off.width = W; off.height = H;
+      const o = off.getContext('2d', { willReadFrequently: true });
+      const setFont = px => {
+        o.font = CONFIG.FONT_WEIGHT + ' ' + px + 'px ' + CONFIG.FONT_STACK;
+        try { o.letterSpacing = (px * CONFIG.TRACKING).toFixed(2) + 'px'; } catch (e) {}
+      };
+      setFont(100);
+      let widest = 1;
+      CONFIG.TEXT.forEach(t => { widest = Math.max(widest, o.measureText(t).width); });
+      const byW = (W * CONFIG.FIT_W) / (widest * CONFIG.CONDENSE) * 100;
+      const size = Math.max(28, Math.min(byW, H * CONFIG.FIT_H));
+      setFont(size);
+      o.textAlign = 'center';
+      o.textBaseline = 'middle';
+
+      const step = CONFIG.GAP;
+      lines = [];
+      CONFIG.TEXT.slice(0, 2).forEach((text, li) => {
+        o.setTransform(1, 0, 0, 1, 0, 0);
+        o.clearRect(0, 0, W, H);
+        o.save();
+        o.translate(W / 2, H / 2);
+        o.scale(CONFIG.CONDENSE, 1);
+        o.fillStyle = '#fff';
+        o.fillText(text, 0, (li - (CONFIG.TEXT.length - 1) / 2) * size * CONFIG.LINE_H);
+        o.restore();
+        const data = o.getImageData(0, 0, W, H).data;
+        const pts = [];
+        for (let y = 0; y < H; y += step) {
+          const row = y * W;
+          for (let x = 0; x < W; x += step) {
+            if (data[(row + x) * 4 + 3] > 128) {
+              const a = Math.random() * Math.PI * 2, d = Math.random() * CONFIG.REVEAL_SPREAD;
+              pts.push({
+                ox: x, oy: y,
+                sx: x + Math.cos(a) * d, sy: y + Math.sin(a) * d,
+                x: x, y: y, vx: 0, vy: 0,
+                d: (x / W) * CONFIG.REVEAL_MS * CONFIG.REVEAL_STAGGER
+              });
+            }
+          }
+        }
+        lines.push(pts);
+      });
+      if (phase === 'reveal' && !reduced()) { lines.forEach(p => p.forEach(q => { q.x = q.sx; q.y = q.sy; })); }
+      else { phase = 'idle'; lines.forEach(p => p.forEach(q => { q.x = q.ox; q.y = q.oy; })); }
+    };
+
+    const paint = () => {
+      const top = accent();
+      ctx.clearRect(0, 0, W, H);
+      const still = reduced();
+      const j = still ? 0 : CONFIG.JITTER;
+      const s = CONFIG.DOT_SIZE;
+      for (let li = 0; li < lines.length; li++) {
+        ctx.fillStyle = li === 0 ? top : rgba(top, CONFIG.BOTTOM_ALPHA);
+        const pts = lines[li];
+        for (let i = 0; i < pts.length; i++) {
+          const p = pts[i];
+          const ox = j ? (Math.random() - 0.5) * j * 2 : 0;
+          const oy = j ? (Math.random() - 0.5) * j * 2 : 0;
+          ctx.fillRect(p.x + ox, p.y + oy, s, s);
+        }
+      }
+    };
+
+    const step = now => {
+      raf = null;
+      if (!awake) return;
+      if (phase === 'reveal') {
+        const e = now - t0;
+        const span = CONFIG.REVEAL_MS * (1 - CONFIG.REVEAL_STAGGER);
+        for (let li = 0; li < lines.length; li++) {
+          const pts = lines[li];
+          for (let i = 0; i < pts.length; i++) {
+            const p = pts[i];
+            let t = (e - p.d) / span;
+            t = t < 0 ? 0 : t > 1 ? 1 : t;
+            const k = 1 - Math.pow(1 - t, 3);
+            p.x = p.sx + (p.ox - p.sx) * k;
+            p.y = p.sy + (p.oy - p.sy) * k;
+          }
+        }
+        if (e >= CONFIG.REVEAL_MS + 40) phase = 'idle';
+      } else {
+        const R = CONFIG.REPEL_RADIUS, R2 = R * R, C = Math.min(CONFIG.REPEL_CORE, R - 1);
+        for (let li = 0; li < lines.length; li++) {
+          const pts = lines[li];
+          for (let i = 0; i < pts.length; i++) {
+            const p = pts[i];
+            const dx = p.x - mx, dy = p.y - my, d2 = dx * dx + dy * dy;
+            if (d2 < R2) {
+              const d = Math.sqrt(d2) || 0.001;
+              const f = (d <= C ? 1 : 1 - (d - C) / (R - C)) * CONFIG.REPEL_FORCE;
+              p.vx += (dx / d) * f;
+              p.vy += (dy / d) * f;
+            }
+            p.vx = (p.vx + (p.ox - p.x) * CONFIG.SPRING) * CONFIG.DAMP;
+            p.vy = (p.vy + (p.oy - p.y) * CONFIG.SPRING) * CONFIG.DAMP;
+            p.x += p.vx;
+            p.y += p.vy;
+          }
+        }
+      }
+      paint();
+      raf = requestAnimationFrame(step);
+    };
+
+    const start = () => {
+      if (reduced()) { paint(); return; }
+      if (!awake) { awake = true; }
+      if (!raf) raf = requestAnimationFrame(step);
+    };
+    const stop = () => { awake = false; if (raf) { cancelAnimationFrame(raf); raf = null; } };
+
+    sample();
+    if (reduced()) { paint(); }
+    else { t0 = performance.now(); phase = 'reveal'; awake = true; start(); }
+
+    const onMove = e => { const r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; };
+    const onLeave = () => { mx = my = -1e4; };
+    wrap.addEventListener('mousemove', onMove, { passive: true });
+    wrap.addEventListener('mouseleave', onLeave);
+
+    let rt = null;
+    const onResize = () => { clearTimeout(rt); rt = setTimeout(() => { sample(); if (reduced() || !awake) paint(); }, 160); };
+    window.addEventListener('resize', onResize);
+
+    const io = new IntersectionObserver(es => {
+      visible = es[0].isIntersecting;
+      if (visible && !document.hidden) { awake = true; start(); } else stop();
+    }, { threshold: 0 });
+    io.observe(wrap);
+
+    const onVis = () => { if (document.hidden) stop(); else if (visible) { awake = true; start(); } };
+    document.addEventListener('visibilitychange', onVis);
+
+    this._dots = {
+      resample: () => { sample(); if (reduced() || !awake) paint(); },
+      destroy: () => {
+        stop(); io.disconnect();
+        window.removeEventListener('resize', onResize);
+        document.removeEventListener('visibilitychange', onVis);
+        wrap.removeEventListener('mousemove', onMove);
+        wrap.removeEventListener('mouseleave', onLeave);
+      }
+    };
+  }
+
+  ES = {
+    "WORK": "TRABAJO", "ENGINEERING": "INGENIERÍA", "ABOUT": "SOBRE MÍ", "CONTACT": "CONTACTO",
+    "OPEN TO OPPORTUNITIES": "ABIERTO A OPORTUNIDADES",
+    "Cristian Bohórquez — Full-Stack Software Developer": "Cristian Bohórquez — Desarrollador de Software Full-Stack",
+    "FULL-STACK SOFTWARE DEVELOPER": "DESARROLLADOR DE SOFTWARE FULL-STACK",
+    "FULL-STACK DEVELOPER · 4+ YEARS": "DESARROLLADOR FULL-STACK · 4+ AÑOS", "JAN 2026 — PRESENT": "ENE 2026 — ACTUALIDAD", "IN PRODUCTION": "EN PRODUCCIÓN", "EDUCATION": "EDUCACIÓN", "LANGUAGES": "IDIOMAS", "2020 · 4+ years": "2020 · 4+ años", "B.Sc. Software Engineering": "Ingeniería de Software", "UNIMINUTO · 5th term": "UNIMINUTO · 5º semestre", "Spanish native · English B1": "Español nativo · Inglés B1",
+    "OPEN TO INTERNATIONAL OPPORTUNITIES": "ABIERTO A OPORTUNIDADES INTERNACIONALES",
+    "SCROLL ↓": "DESLIZA ↓",
+    "WHERE IDEAS": "DONDE LAS IDEAS", "BECOME": "SE VUELVEN", "SYSTEMS.": "SISTEMAS.",
+    "Full-Stack Software Developer building": "Desarrollador Full-Stack que construye aplicaciones web escalables, plataformas de e-commerce, APIs y productos digitales con tecnologías modernas de TypeScript.",
+    "VIEW SELECTED WORK": "VER TRABAJO SELECCIONADO", "GET IN TOUCH": "HABLEMOS",
+    "DATABASE": "BASE DE DATOS", "INFRASTRUCTURE": "INFRAESTRUCTURA", "DATA": "DATOS",
+    "SECTION 01": "SECCIÓN 01", "SECTION 03": "SECCIÓN 03", "SECTION 04": "SECCIÓN 04", "SECTION 05": "SECCIÓN 05", "SECTION 07": "SECCIÓN 07",
+    "SECTION 02 / CASE STUDY": "SECCIÓN 02 / CASO DE ESTUDIO", "SECTION 06 / ABOUT": "SECCIÓN 06 / SOBRE MÍ", "SECTION 08 / CONTACT": "SECCIÓN 08 / CONTACTO",
+    "SELECTED WORK": "TRABAJO SELECCIONADO",
+    "EXPERIENCE": "EXPERIENCIA", "WHERE I'VE BUILT": "DÓNDE HE CONSTRUIDO", "2020 → PRESENT": "2020 → ACTUALIDAD",
+    "JAN 2026 —": "ENE 2026 —",
+    "Fullstack Developer — production e-commerce": "Fullstack Developer — plataforma de e-commerce en producción para productos educativos, desde el esquema hasta el despliegue.",
+    "Fullstack Developer — web platform, data layer": "Fullstack Developer — plataforma web, capa de datos en Neon con Prisma y un chatbot automatizado de generación de leads.",
+    "Fullstack Developer, freelance — microservices": "Fullstack Developer, freelance — e-commerce en microservicios con principios SOLID y flujos de trabajo colaborativos en Git.",
+    "Web Developer — features for an international": "Web Developer — funcionalidades para una plataforma internacional de empleo, trabajando con Scrum en un equipo distribuido.",
+    "Fullstack Developer — education platforms": "Fullstack Developer — plataformas educativas usadas por colegios en todo Chile, con compatibilidad entre navegadores.",
+    "Frontend & Mobile Developer — interfaces": "Frontend & Mobile Developer — interfaces para e-commerce, delivery y contact center, además de apps móviles híbridas.",
+    "Real products. Real constraints.": "Productos reales. Restricciones reales. Ingeniería real.",
+    "Educational toys e-commerce platform": "Plataforma de e-commerce de juguetes educativos: catálogo, checkout, facturación y administración, construida y desplegada de principio a fin.",
+    "VIEW CASE STUDY": "VER CASO DE ESTUDIO",
+    "[ PRODUCT SHOT — TIKARIY STOREFRONT ]": "[ CAPTURA — TIENDA TIKARIY ]",
+    "[ DASHBOARD SHOT ]": "[ CAPTURA — PANEL ]", "[ STOREFRONT SHOT ]": "[ CAPTURA — APP DE CAMPO ]", "[ JOB PLATFORM SHOT ]": "[ CAPTURA — CONSOLA API ]",
+    "[ PORTRAIT — OPTIONAL ]": "[ RETRATO — OPCIONAL ]",
+    "Corporate web platform with a Prisma": "Plataforma web corporativa con capa de datos en Prisma sobre Neon y un chatbot automatizado de generación de leads.",
+    "Freelance e-commerce on a microservices": "E-commerce freelance sobre arquitectura de microservicios, con principios SOLID aplicados en todo el proyecto.",
+    "International job platform:": "Plataforma internacional de empleo: gestión de estado escalable y componentes mantenibles para un equipo distribuido.",
+    "MORE WORK": "MÁS TRABAJO",
+    "Full case studies and source available": "Casos de estudio completos y código fuente disponibles a solicitud.",
+    "REQUEST ACCESS": "SOLICITAR ACCESO",
+    "[ STOREFRONT SHOT ]": "[ CAPTURA — TIENDA ]", "[ JOB PLATFORM SHOT ]": "[ CAPTURA — PLATAFORMA DE EMPLEO ]",
+    "THE CHALLENGE": "EL DESAFÍO",
+    "An educational toy brand was selling": "Una marca de juguetes educativos vendía por mensajes de WhatsApp y una hoja de cálculo. Se perdían pedidos, el inventario era una suposición y cada factura se escribía a mano.",
+    "The platform had to replace that process": "La plataforma tenía que reemplazar ese proceso sin perder el canal de venta conversacional del que dependía el negocio. Eso significaba un catálogo real, pagos reales, facturación automática y una administración que el personal no técnico pudiera operar el primer día, todo entregado por un solo desarrollador con un plazo fijo.",
+    "MY ROLE": "MI ROL", "END TO END": "DE PUNTA A PUNTA",
+    "Architecture": "Arquitectura", "Backend & API design": "Backend y diseño de API", "Frontend & UI": "Frontend y UI",
+    "Database & schema": "Base de datos y esquema", "Integrations": "Integraciones", "Deployment": "Despliegue",
+    "THE ARCHITECTURE": "LA ARQUITECTURA",
+    "Server-rendered storefront.": "Tienda renderizada en el servidor. Catálogo y páginas de producto en caché en el edge, estado del carrito en el cliente.",
+    "One typed contract between client": "Un único contrato tipado entre cliente y servidor. Los tipos generados eliminan las suposiciones en la frontera.",
+    "Modules per domain": "Módulos por dominio: catálogo, pedidos, facturación, autenticación. Las reglas de negocio viven aquí, nunca en la UI.",
+    "Normalized schema with constraints": "Esquema normalizado con restricciones que hacen trabajo real: pedidos e inventario no pueden contradecirse.",
+    "Cloud & Integrations": "Cloud e integraciones",
+    "Cloudinary for media": "Cloudinary para medios, pagos con Wompi, facturación electrónica DIAN con Siigo, entrega a WhatsApp. Desplegado en Vercel y Railway.",
+    "PRESENTATION": "PRESENTACIÓN", "CONTRACT": "CONTRATO", "DOMAIN": "DOMINIO", "STATE": "ESTADO",
+    "KEY FEATURES": "FUNCIONALIDADES CLAVE",
+    "Product catalog": "Catálogo de productos", "Authentication": "Autenticación", "Shopping cart": "Carrito de compras",
+    "Payments": "Pagos", "PAYMENTS": "PAGOS", "Invoice generation": "Generación de facturas",
+    "WhatsApp integration": "Integración con WhatsApp", "Admin dashboard": "Panel de administración", "Product management": "Gestión de productos",
+    "ENGINEERING DECISIONS": "DECISIONES DE INGENIERÍA", "EXPAND TO READ THE REASONING": "EXPANDE PARA LEER EL RAZONAMIENTO",
+    "Why GraphQL?": "¿Por qué GraphQL?", "Why PostgreSQL?": "¿Por qué PostgreSQL?", "How the architecture evolved": "Cómo evolucionó la arquitectura",
+    "TRADE-OFF": "COMPROMISO", "DETAIL": "DETALLE", "RESULT": "RESULTADO",
+    "The storefront, the cart and the admin": "La tienda, el carrito y el panel de administración necesitan porciones distintas pero solapadas de los mismos datos. Con REST eso significaba tres conjuntos de endpoints, o sobre-consultar en todas partes. Un único esquema tipado permitió que cada superficie pida exactamente lo que renderiza, y la generación de código convirtió ese esquema en tipos de TypeScript en ambos lados: así, renombrar un campo rompe el build en lugar del checkout.",
+    "Caching is harder than with plain HTTP": "El caché es más difícil que con endpoints HTTP planos. Las consultas persistidas y el caché por resolver cubrieron las rutas calientes; el resto se midió antes de optimizarlo.",
+    "Commerce is a relational problem.": "El comercio es un problema relacional. Los pedidos referencian productos, los precios referencian monedas, las facturas referencian pedidos, y ninguna de esas relaciones puede desviarse. Postgres da transacciones, llaves foráneas y restricciones de verificación, así que los invariantes que le importan al negocio los hace cumplir la base de datos y no la buena intención del código.",
+    "Money is stored as integer minor units": "El dinero se guarda en unidades menores enteras. Los atributos de producto que varían por categoría viven en JSONB, lo que mantiene angostas las tablas centrales sin renunciar a poder de consulta.",
+    "Version one was a single Next.js app": "La versión uno era una sola app de Next.js hablando directo con la base de datos. Salió rápido y me enseñó dónde estaba la complejidad real: precios, stock y facturación. Esas reglas se filtraban a los handlers de rutas, así que el dominio se movió a un servicio NestJS con sus propios módulos, y el frontend pasó a ser cliente de un contrato en lugar de dueño de la lógica de negocio.",
+    "The admin dashboard was added later": "El panel de administración se añadió después contra la misma API, sin cambios en la tienda. Esa es la prueba que uso para saber si una frontera quedó trazada en el lugar correcto.",
+    "HOW I BUILD": "CÓMO CONSTRUYO",
+    "I don't just write code.": "No solo escribo código. Diseño sistemas alrededor del problema.",
+    "ARCHITECTURE": "ARQUITECTURA", "TYPE SAFETY": "SEGURIDAD DE TIPOS", "PERFORMANCE": "RENDIMIENTO", "PRODUCT THINKING": "VISIÓN DE PRODUCTO",
+    "Design systems around maintainability": "Diseñar sistemas pensando en mantenibilidad, escalabilidad y una separación clara de responsabilidades.",
+    "Use TypeScript to create reliable": "Usar TypeScript para crear contratos confiables y reducir la complejidad.",
+    "Think about rendering, data fetching": "Pensar en renderizado, obtención de datos, consultas a base de datos, assets y rendimiento en ejecución.",
+    "Technical decisions should serve": "Las decisiones técnicas deben servir al producto y a las personas que lo usan.",
+    "TECHNOLOGY": "TECNOLOGÍA", "TOOLS I REACH FOR, NOT A SCORE SHEET": "HERRAMIENTAS QUE USO, NO UN PUNTAJE",
+    "CURRENTLY EXPLORING": "EXPLORANDO AHORA", "2025 → ONGOING": "2025 → EN CURSO",
+    "IN PROGRESS": "EN CURSO", "DEEPENING": "PROFUNDIZANDO", "NEXT": "SIGUIENTE",
+    "Data Structures & Algorithms": "Estructuras de datos y algoritmos", "System Design": "Diseño de sistemas",
+    "Advanced TypeScript": "TypeScript avanzado", "3D Web Experiences": "Experiencias web 3D",
+    "Daily practice. Complexity as a habit": "Práctica diaria. La complejidad como hábito de pensamiento, no como trivia de entrevista.",
+    "Queues, caching layers and failure": "Colas, capas de caché y modos de falla a una escala mayor que un solo producto.",
+    "Generics and inference used to make": "Genéricos e inferencia para hacer que los estados inválidos no se puedan representar.",
+    "Geometry, materials and render cost": "Geometría, materiales y costo de render en el navegador.",
+    "Interfaces where space carries meaning": "Interfaces donde el espacio comunica significado, rápidas en dispositivos de gama media.",
+    "I started writing software because": "Empecé a escribir software porque quería entender cómo las ideas se convierten en productos.",
+    "That curiosity turned into a practice.": "Esa curiosidad se volvió una práctica. Empecé en 2020 construyendo interfaces para e-commerce, delivery y contact center, y el patrón se repetía: lo interesante nunca era el framework, era la distancia entre lo que alguien necesitaba y lo que el sistema realmente hacía.",
+    "Since then I have worked across": "Desde entonces he trabajado en todo el stack, llevando productos desde un primer esquema hasta una URL en producción. Me gustan los problemas con restricciones reales: un negocio con una fecha límite, un equipo sin desarrollador, un proceso que le quedó chico a su hoja de cálculo. Trabajo desde Bogotá con equipos internacionales, y me importa escribir software que siga siendo comprensible mucho después de salir a producción.",
+    "LOCATION": "UBICACIÓN", "DEVELOPER SINCE": "DESARROLLADOR DESDE", "CURRENT FOCUS": "FOCO ACTUAL", "AVAILABILITY": "DISPONIBILIDAD",
+    "Full-stack TypeScript": "Ingeniería de producto", "product engineering": "full-stack TypeScript",
+    "Open to international": "Abierto a oportunidades", "opportunities": "internacionales",
+    "BEHIND THE CODE": "DETRÁS DEL CÓDIGO",
+    "Engineering notes — the reasoning": "Notas de ingeniería: el razonamiento detrás de las decisiones, escrito cuando el trabajo aún estaba fresco.",
+    "Why I chose GraphQL for Tikariy": "Por qué elegí GraphQL para Tikariy",
+    "How I structure a NestJS backend": "Cómo estructuro un backend en NestJS",
+    "Designing scalable PostgreSQL schemas": "Diseñar esquemas escalables en PostgreSQL",
+    "What I learned building a real e-commerce": "Lo que aprendí construyendo un e-commerce real",
+    "Three clients, one dataset.": "Tres clientes, un mismo conjunto de datos. La tienda quiere imágenes y precios, el carrito quiere stock y totales, la administración quiere todo eso más campos de auditoría. Con REST habría sido un set de endpoints por cliente, o un endpoint enorme que nadie podría cambiar con seguridad.",
+    "The schema became the shared vocabulary": "El esquema se convirtió en el vocabulario común del proyecto. Una vez que existió, los tipos generados hicieron que cliente y servidor coincidieran por construcción, y añadir el panel de administración costó días en lugar de semanas. El precio es disciplina de caché e higiene en los resolvers, un precio que vale la pena cuando el grafo de datos es de verdad un grafo.",
+    "One module per domain concept": "Un módulo por concepto de dominio, no por capa técnica. Catálogo, pedidos, facturación y autenticación son dueños de sus entidades, servicios y resolvers, y exponen una superficie pequeña al resto de la app. Controladores y resolvers se quedan delgados: validan la entrada y delegan.",
+    "The rule I hold to is that a module": "La regla que mantengo es que un módulo puede depender de una interfaz, pero nunca de las tripas de otro módulo. Hace que los cambios aburridos sigan siendo aburridos, y que los interesantes (un nuevo proveedor de pagos, una segunda tienda) sean locales en lugar de estructurales.",
+    "Start from the invariants.": "Empieza por los invariantes. ¿Qué dos filas nunca deben contradecirse? Esas relaciones se vuelven llaves foráneas y restricciones antes de escribir código, porque la base de datos es el último lugar donde un bug se atrapa barato.",
+    "After that it is measurement": "Después es medición: leer los planes de consulta, indexar los caminos que el producto realmente recorre y mantener angostas las tablas calientes. Atributos flexibles en JSONB, dinero en enteros, timestamps en UTC. Casi todos los problemas de escala que he visto eran problemas de esquema disfrazados de rendimiento.",
+    "The checkout is the easy part.": "El checkout es la parte fácil. Lo difícil son los estados alrededor: un pago que salió bien mientras el navegador se cerraba, stock reservado para un carrito al que nadie vuelve, una factura que debe existir exactamente una vez. El comercio es un estudio de idempotencia.",
+    "The other lesson was about people.": "La otra lección fue sobre personas. El panel de administración decidió si la plataforma se adoptaba, y ninguna elegancia de backend habría compensado un formulario de producto confuso. Entregar software es entregar la parte que alguien tiene que usar cada mañana.",
+    "LET'S BUILD": "CONSTRUYAMOS", "SOMETHING": "ALGO", "USEFUL.": "ÚTIL.",
+    "Open to software engineering opportunities": "Abierto a oportunidades de ingeniería de software, proyectos freelance y colaboraciones.",
+    "EMAIL ME": "ESCRÍBEME",
+    "SOFTWARE DEVELOPER": "DESARROLLADOR DE SOFTWARE", "COLOMBIA / OPEN TO THE WORLD": "COLOMBIA / ABIERTO AL MUNDO"
+  };
+
+  setEn = () => this.setLang('en');
+  setEs = () => this.setLang('es');
+
+  setLang(l) {
+    this._lang = l;
+    try { localStorage.setItem('cb-lang', l); } catch (e) {}
+    document.documentElement.lang = l;
+    if (l === 'es') this.translate(); else this.restoreLang();
+    document.querySelectorAll('[data-lang]').forEach(b => {
+      b.style.color = b.dataset.lang === l ? 'var(--acc)' : 'var(--faint)';
+    });
+    if (this._dots) this._dots.resample();
+  }
+
+  translate() {
+    const ES = this.ES;
+    if (!this._keys) this._keys = Object.keys(ES).filter(k => k.length >= 20).sort((a, b) => b.length - a.length);
+    if (!this._orig) this._orig = new Map();
+    const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode: n => {
+        const p = n.parentNode;
+        if (!p || /^(SCRIPT|STYLE|CANVAS|TEXTAREA)$/.test(p.nodeName)) return NodeFilter.FILTER_REJECT;
+        return n.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    let n;
+    while ((n = w.nextNode())) {
+      if (this._orig.has(n)) continue;
+      const t = n.nodeValue.replace(/\s+/g, ' ').trim();
+      let es = ES[t];
+      if (!es) {
+        for (let i = 0; i < this._keys.length; i++) {
+          const k = this._keys[i];
+          if (t.length >= k.length && t.indexOf(k) === 0) { es = ES[k]; break; }
+        }
+      }
+      if (es) { this._orig.set(n, n.nodeValue); n.nodeValue = es; }
+    }
+  }
+
+  restoreLang() {
+    if (!this._orig) return;
+    this._orig.forEach((v, n) => { if (n.isConnected) n.nodeValue = v; });
+    this._orig = new Map();
+  }
+
+  renderVals() { return { toggle: this.toggle, setEn: this.setEn, setEs: this.setEs }; }
+}
+</script>
+</body>
+</html>
