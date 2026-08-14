@@ -20,7 +20,7 @@
 <header style="position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:16px clamp(18px,3.6vw,56px);background:rgba(11,11,12,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)">
 <a href="#top" style="font-size:12px;font-weight:600;letter-spacing:.16em">CRISTIAN BOHÓRQUEZ</a>
 <div style="display:flex;align-items:center;gap:clamp(14px,2vw,34px);flex-wrap:wrap">
-<div style="display:flex;align-items:center;gap:8px;padding-right:clamp(4px,1.4vw,18px)">
+<div class="open-to-opportunities" style="display:flex;align-items:center;gap:8px;padding-right:clamp(4px,1.4vw,18px)">
 <span style="width:6px;height:6px;border-radius:50%;background:var(--acc);animation:breathe 2.8s ease-in-out infinite"></span>
 <span style="font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--dim)">OPEN TO OPPORTUNITIES</span>
 </div>
@@ -562,6 +562,9 @@ class Component extends DCLogic {
     this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     this._orig = new Map();
     this._pending = [];
+    this._checkMobile = () => { document.documentElement.classList.toggle('is-mobile', window.innerWidth <= 760); };
+    this._checkMobile();
+    window.addEventListener('resize', this._checkMobile);
     this._onScroll = () => {
       if (this._rafPend) return;
       this._rafPend = requestAnimationFrame(() => { this._rafPend = 0; this.checkReveals(); });
@@ -582,6 +585,7 @@ class Component extends DCLogic {
   componentWillUnmount() {
     clearInterval(this.timer);
     if (this._onScroll) { window.removeEventListener('scroll', this._onScroll); window.removeEventListener('resize', this._onScroll); }
+    if (this._checkMobile) window.removeEventListener('resize', this._checkMobile);
     if (this._particles) this._particles.destroy();
     if (this._cursor) this._cursor.remove();
     if (this._onMove) window.removeEventListener('mousemove', this._onMove);
