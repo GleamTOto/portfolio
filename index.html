@@ -543,6 +543,7 @@
 <a href="mailto:naitsirc1101@gmail.com" data-magnet style="display:inline-flex;align-items:center;gap:12px;padding:17px 28px;background:var(--ink);color:#0B0B0C;font-size:11.5px;font-weight:600;letter-spacing:.14em;transition:background .35s ease,transform .3s cubic-bezier(.16,1,.3,1)" style-hover="background:var(--acc)"><i class="fa-solid fa-envelope" style="font-size:13px"></i>EMAIL ME<span style="font-family:'Poppins',sans-serif">→</span></a>
 <a href="https://www.linkedin.com/in/cristian-bohorquez-717764183" target="_blank" rel="noopener" data-magnet style="display:inline-flex;align-items:center;gap:12px;padding:17px 28px;border:1px solid var(--line);font-size:11.5px;font-weight:600;letter-spacing:.14em;transition:border-color .35s ease,color .35s ease,transform .3s cubic-bezier(.16,1,.3,1)" style-hover="border-color:var(--acc);color:var(--acc)"><i class="fa-brands fa-linkedin" style="font-size:14px;vertical-align:middle"></i>LINKEDIN<span style="font-family:'Poppins',sans-serif">→</span></a>
 <a href="https://github.com/GleamTOto" target="_blank" rel="noopener" data-magnet style="display:inline-flex;align-items:center;gap:12px;padding:17px 28px;border:1px solid var(--line);font-size:11.5px;font-weight:600;letter-spacing:.14em;transition:border-color .35s ease,color .35s ease,transform .3s cubic-bezier(.16,1,.3,1)" style-hover="border-color:var(--acc);color:var(--acc)"><img src="https://cdn.simpleicons.org/github/999999" alt="GitHub" width="14" height="14" style="vertical-align:middle">GITHUB<span style="font-family:'Poppins',sans-serif">→</span></a>
+<a href="/uploads/Cristian_Bohorquez_CV_EN_2026.pdf" download data-cv-link data-magnet style="display:inline-flex;align-items:center;gap:12px;padding:17px 28px;border:1px solid var(--line);font-size:11.5px;font-weight:600;letter-spacing:.14em;transition:border-color .35s ease,color .35s ease,transform .3s cubic-bezier(.16,1,.3,1)" style-hover="border-color:var(--acc);color:var(--acc)"><i class="fa-solid fa-download" style="font-size:13px"></i>DOWNLOAD CV<span style="font-family:'Poppins',sans-serif">↓</span></a>
 </div>
 <footer style="display:flex;flex-wrap:wrap;gap:16px 40px;align-items:baseline;justify-content:space-between;padding-top:22px;border-top:1px solid var(--line);font-family:'Poppins',sans-serif;font-size:10.5px;letter-spacing:.14em;color:var(--faint)">
 <span style="color:var(--dim)">CRISTIAN BOHÓRQUEZ</span>
@@ -986,6 +987,9 @@ class Component extends DCLogic {
     if (l === 'es') this.translate(); else this.restoreLang();
     const txt = document.querySelector('[data-lang-text]');
     if (txt) txt.textContent = l.toUpperCase();
+    /* Swap CV download link based on language */
+    const cv = document.querySelector('[data-cv-link]');
+    if (cv) cv.href = '/uploads/Cristian_Bohorquez_CV_' + l.toUpperCase() + '_2026.pdf';
     if (this._particles) this._particles.snapAll();
   }
 
