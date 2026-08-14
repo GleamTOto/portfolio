@@ -685,16 +685,17 @@ class Component extends DCLogic {
     if (!this._hoverDelegated) {
       this._hoverDelegated = true;
       this._hoverOver = e => {
+        const motionOff = this.reduced || this.motion() === 'Off';
         const layer = e.target.closest('[data-layer], [data-principle]');
-        if (layer && !still) {
+        if (layer) {
           layer.style.background = 'rgba(239,237,233,.035)';
           layer.style.borderLeft = '2px solid var(--acc)';
-          layer.style.paddingLeft = '18px';
+          if (!motionOff) layer.style.paddingLeft = '18px';
         }
         const tech = e.target.closest('[data-tech]');
-        if (tech && !still) {
+        if (tech) {
           tech.style.color = 'var(--acc)';
-          tech.style.transform = 'translateX(6px)';
+          if (!motionOff) tech.style.transform = 'translateX(6px)';
         }
       };
       this._hoverOut = e => {
