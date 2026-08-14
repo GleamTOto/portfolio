@@ -72,9 +72,7 @@ a:hover {
 [data-principle] {
   border-left: 2px solid transparent;
   transition: background .5s cubic-bezier(.25,.46,.45,.94),
-              padding-left .5s cubic-bezier(.25,.46,.45,.94),
-              border-left-color .5s cubic-bezier(.25,.46,.45,.94),
-              transform .5s cubic-bezier(.25,.46,.45,.94);
+              border-left-color .5s cubic-bezier(.25,.46,.45,.94);
 }
 
 [data-tech] {
