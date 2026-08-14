@@ -774,8 +774,17 @@ class Component extends DCLogic {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       off.width = W;
       off.height = H;
-      const fs = Math.min(W * 0.185, H * 0.24, 182);
-      offCtx.font = '900 ' + fs + 'px "Archivo","Arial Black",sans-serif';
+      /* Option A: measure and fit — start with max size, shrink if text overflows */
+      let fs = Math.min(W * 0.185, H * 0.24, 182);
+      const pad = W * 0.06;
+      const avail = W - pad * 2;
+      const setFont = s => { offCtx.font = '900 ' + s + 'px "Archivo","Arial Black",sans-serif'; };
+      setFont(fs);
+      /* measure both lines, pick the widest */
+      const w0 = offCtx.measureText(TEXT[0]).width;
+      const w1 = offCtx.measureText(TEXT[1]).width;
+      const widest = Math.max(w0, w1);
+      if (widest > avail) { fs = fs * (avail / widest); setFont(fs); }
       offCtx.textAlign = 'center';
       offCtx.textBaseline = 'middle';
       offCtx.clearRect(0, 0, W, H);
@@ -854,10 +863,12 @@ class Component extends DCLogic {
     const onLeave = () => { mx = my = -9999; };
     const onDown = () => { pressed = true; };
     const onUp = e => { pressed = false; if (e.pointerType !== 'mouse') { mx = my = -9999; } };
+    const onCancel = e => { pressed = false; if (e.pointerType !== 'mouse') { mx = my = -9999; } };
     wrap.addEventListener('pointermove', onMove, { passive: true });
     wrap.addEventListener('pointerleave', onLeave);
     wrap.addEventListener('pointerdown', onDown);
     wrap.addEventListener('pointerup', onUp);
+    wrap.addEventListener('pointercancel', onCancel);
 
     let rt = null;
     const onResize = () => { clearTimeout(rt); rt = setTimeout(() => { init(); }, 160); };
@@ -882,6 +893,7 @@ class Component extends DCLogic {
         wrap.removeEventListener('pointerleave', onLeave);
         wrap.removeEventListener('pointerdown', onDown);
         wrap.removeEventListener('pointerup', onUp);
+        wrap.removeEventListener('pointercancel', onCancel);
       }
     };
   }

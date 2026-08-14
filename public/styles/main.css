@@ -120,6 +120,7 @@ a:hover {
 .is-mobile [data-particles] {
   height: 86vh !important;
   min-height: 500px !important;
+  touch-action: none;
 }
 
 .is-mobile [data-screen-label="01b Experience"] [data-layer] {
@@ -142,4 +143,9 @@ a:hover {
 
 .is-mobile footer {
   gap: 10px 20px !important;
+}
+
+/* === Canvas touch optimization === */
+[data-particles] {
+  touch-action: none;
 }
