@@ -154,3 +154,37 @@ a:hover {
 [data-particles] {
   touch-action: none;
 }
+
+/* === Custom Dual-Ball Cursor === */
+.has-cursor {
+  cursor: none;
+}
+.has-cursor a,
+.has-cursor button,
+.has-cursor [role="button"],
+.has-cursor input,
+.has-cursor textarea,
+.has-cursor select,
+.has-cursor [data-magnet],
+.has-cursor [data-project] {
+  cursor: none;
+}
+
+.cursor {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  mix-blend-mode: difference;
+  will-change: transform;
+}
+
+.cursor__ball circle {
+  fill: #f7f8fa;
+}

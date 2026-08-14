@@ -587,8 +587,7 @@ class Component extends DCLogic {
     if (this._onScroll) { window.removeEventListener('scroll', this._onScroll); window.removeEventListener('resize', this._onScroll); }
     if (this._checkMobile) window.removeEventListener('resize', this._checkMobile);
     if (this._particles) this._particles.destroy();
-    if (this._cursor) this._cursor.remove();
-    if (this._onMove) window.removeEventListener('mousemove', this._onMove);
+    if (this._cursorCleanup) this._cursorCleanup();
   }
   motion() { return this.props.motion || 'Full'; }
   applyProps() {
@@ -668,7 +667,6 @@ class Component extends DCLogic {
         if (t) t.style.color = 'var(--acc)';
         const cta = el.querySelector('[data-cta]');
         if (cta) { cta.style.gap = '18px'; cta.style.color = 'var(--acc)'; }
-        if (this._cursor && el.dataset.label) { this._cursor.textContent = (this._lang === 'es' ? 'VER ' : 'VIEW ') + el.dataset.label; this._cursor.style.opacity = '1'; this._cursor.style.transform += ' scale(1)'; }
       });
       el.addEventListener('mouseleave', () => {
         const img = el.querySelector('[data-img]'), num = el.querySelector('[data-num]'), t = el.querySelector('[data-title]');
@@ -677,7 +675,6 @@ class Component extends DCLogic {
         if (t) t.style.color = 'var(--ink)';
         const cta = el.querySelector('[data-cta]');
         if (cta) { cta.style.gap = '10px'; cta.style.color = 'var(--ink)'; }
-        if (this._cursor) this._cursor.style.opacity = '0';
       });
     });
 
@@ -737,18 +734,96 @@ class Component extends DCLogic {
   };
 
   initCursor() {
-    const c = document.createElement('div');
-    c.style.cssText = 'position:fixed;left:0;top:0;z-index:80;pointer-events:none;opacity:0;padding:9px 13px;border-radius:99px;background:var(--acc);color:#0B0B0C;font:600 9.5px/1 "Poppins",sans-serif;letter-spacing:.14em;transition:opacity .3s ease;will-change:transform';
-    document.body.appendChild(c);
-    this._cursor = c;
-    let x = 0, y = 0, tx = 0, ty = 0, raf;
-    this._onMove = e => { tx = e.clientX + 16; ty = e.clientY + 16; if (!raf) raf = requestAnimationFrame(loop); };
-    const loop = () => {
-      x += (tx - x) * 0.18; y += (ty - y) * 0.18;
-      c.style.transform = 'translate(' + x + 'px,' + y + 'px)';
-      raf = Math.abs(tx - x) > 0.4 || Math.abs(ty - y) > 0.4 ? requestAnimationFrame(loop) : null;
+    /* Skip on touch or reduced motion */
+    if (!matchMedia('(pointer:fine)').matches) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    /* Create cursor DOM — direct child of body */
+    const el = document.createElement('div');
+    el.className = 'cursor';
+    el.setAttribute('aria-hidden', 'true');
+    el.innerHTML = '<div class="cursor__ball cursor__ball--big"><svg height="30" width="30"><circle cx="15" cy="15" r="12"/></svg></div><div class="cursor__ball cursor__ball--small"><svg height="10" width="10"><circle cx="5" cy="5" r="4"/></svg></div>';
+    document.body.appendChild(el);
+
+    /* Enable custom cursor */
+    document.documentElement.classList.add('has-cursor');
+
+    const big = el.querySelector('.cursor__ball--big');
+    const small = el.querySelector('.cursor__ball--small');
+
+    /* State */
+    let mx = -100, my = -100;
+    let bx = -100, by = -100;
+    let sx = -100, sy = -100;
+    let scale = 1, scaleTarget = 1;
+    let raf = null, lastT = 0;
+    let visible = true;
+
+    /* Pointer tracking */
+    const onMove = e => { mx = e.clientX; my = e.clientY; if (!raf) { lastT = performance.now(); raf = requestAnimationFrame(loop); } };
+    const onLeave = () => { visible = false; el.style.opacity = '0'; };
+    const onEnter = () => { visible = true; el.style.opacity = '1'; };
+
+    /* Hover detection via delegation */
+    const SEL = 'a, button, [role="button"], input, textarea, select, [data-magnet], [data-project]';
+    const onOver = e => { if (e.target.closest(SEL)) scaleTarget = 3.5; };
+    const onOut = e => { if (e.target.closest(SEL)) scaleTarget = 1; };
+
+    /* Animation loop with delta-time correction */
+    const BIG_F = 0.14;
+    const SMALL_F = 0.42;
+    const SCALE_F = 0.18;
+    const BASE_DT = 16.667;
+
+    const loop = now => {
+      raf = null;
+      const dt = Math.min(now - lastT, 50);
+      lastT = now;
+
+      /* Lerp with delta-time correction */
+      const bf = 1 - Math.pow(1 - BIG_F, dt / BASE_DT);
+      const sf = 1 - Math.pow(1 - SMALL_F, dt / BASE_DT);
+      const cf = 1 - Math.pow(1 - SCALE_F, dt / BASE_DT);
+
+      bx += (mx - bx) * bf;
+      by += (my - by) * bf;
+      sx += (mx - sx) * sf;
+      sy += (my - sy) * sf;
+      scale += (scaleTarget - scale) * cf;
+
+      big.style.transform = 'translate3d(' + (bx - 15) + 'px,' + (by - 15) + 'px,0) scale(' + scale + ')';
+      small.style.transform = 'translate3d(' + (sx - 5) + 'px,' + (sy - 5) + 'px,0)';
+
+      /* Continue loop if still moving or scaling */
+      const moving = Math.abs(mx - bx) > 0.1 || Math.abs(my - by) > 0.1;
+      const scaling = Math.abs(scaleTarget - scale) > 0.001;
+      if (moving || scaling) raf = requestAnimationFrame(loop);
     };
-    window.addEventListener('mousemove', this._onMove, { passive: true });
+
+    /* Listeners */
+    window.addEventListener('pointermove', onMove, { passive: true });
+    document.addEventListener('pointerleave', onLeave);
+    document.addEventListener('pointerenter', onEnter);
+    document.addEventListener('pointerover', onOver);
+    document.addEventListener('pointerout', onOut);
+
+    /* Visibility */
+    const onVis = () => { if (document.hidden && raf) { cancelAnimationFrame(raf); raf = null; } };
+    document.addEventListener('visibilitychange', onVis);
+
+    /* Store for cleanup */
+    this._cursorEl = el;
+    this._cursorCleanup = () => {
+      document.documentElement.classList.remove('has-cursor');
+      el.remove();
+      window.removeEventListener('pointermove', onMove);
+      document.removeEventListener('pointerleave', onLeave);
+      document.removeEventListener('pointerenter', onEnter);
+      document.removeEventListener('pointerover', onOver);
+      document.removeEventListener('pointerout', onOut);
+      document.removeEventListener('visibilitychange', onVis);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }
 
   initParticles(wrap) {
