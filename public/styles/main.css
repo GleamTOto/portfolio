@@ -150,7 +150,7 @@ a:hover {
 
 /* === Canvas touch optimization === */
 [data-particles] {
-  touch-action: pan-y;
+  touch-action: none;
 }
 
 /* === Custom Dual-Ball Cursor === */

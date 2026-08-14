@@ -915,7 +915,7 @@ class Component extends DCLogic {
       if (!awake) return;
       const heroBottom = wrap.getBoundingClientRect().bottom;
       if (heroBottom <= 0) { raf = requestAnimationFrame(step); return; }
-      const R = pressed ? 150 : 105;
+      const R = pressed ? (isMobile ? 75 : 150) : (isMobile ? 52 : 105);
       const R2 = R * R;
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
