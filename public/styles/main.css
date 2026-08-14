@@ -122,9 +122,8 @@ a:hover {
 }
 
 .is-mobile [data-particles] {
-  height: 86vh !important;
-  min-height: 500px !important;
-  touch-action: none;
+  height: 50vh !important;
+  min-height: 320px !important;
 }
 
 .is-mobile [data-screen-label="01b Experience"] [data-layer] {
@@ -151,7 +150,7 @@ a:hover {
 
 /* === Canvas touch optimization === */
 [data-particles] {
-  touch-action: none;
+  touch-action: pan-y;
 }
 
 /* === Custom Dual-Ball Cursor === */
