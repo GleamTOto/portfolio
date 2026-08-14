@@ -683,12 +683,12 @@ class Component extends DCLogic {
       if (!once(el, 'hv')) return;
       el.addEventListener('mouseenter', () => {
         el.style.background = 'rgba(239,237,233,.035)';
-        el.style.borderLeftColor = 'var(--acc)';
+        el.style.borderLeft = '2px solid var(--acc)';
         if (!still) el.style.paddingLeft = '18px';
       });
       el.addEventListener('mouseleave', () => {
         el.style.background = 'transparent';
-        el.style.borderLeftColor = 'var(--line)';
+        el.style.borderLeft = '2px solid transparent';
         el.style.paddingLeft = '0px';
       });
     });

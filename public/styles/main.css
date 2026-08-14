@@ -75,7 +75,6 @@ a:hover {
 /* === Hover Transitions === */
 [data-layer],
 [data-principle] {
-  border-left: 2px solid transparent;
   transition: background .6s cubic-bezier(.25,.46,.45,.94),
               padding-left .7s cubic-bezier(.4,0,.2,1),
               border-left-color .5s cubic-bezier(.25,.46,.45,.94);
