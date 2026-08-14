@@ -95,6 +95,69 @@ a:hover {
 }
 
 [data-cta] {
-  transition: gap .4s cubic-bezier(.25,.46,.45,.94),
-              color .4s cubic-bezier(.25,.46,.45,.94);
+  transition: gap .4s cubic-bezier(.16,1,.3,1),
+              color .4s cubic-bezier(.16,1,.3,1);
+}
+
+/* === Mobile Optimizations (760px breakpoint) === */
+@media (max-width: 760px) {
+
+  /* — Global: prevent any horizontal overflow — */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* — Header: compact, logo + language toggle only — */
+  header {
+    gap: 10px;
+    padding: 12px clamp(14px, 3.6vw, 56px);
+  }
+  header > div > div:first-child { /* OPEN TO OPPORTUNITIES badge */
+    display: none;
+  }
+  header > div > nav { /* nav links */
+    display: none;
+  }
+  header > div {
+    gap: 14px;
+  }
+
+  /* — L1-L4 tech stack: column layout, no overflow — */
+  #top > div > div:last-child > div > div > div {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* — Experience rows: reduce date width (override inline flex) — */
+  [data-screen-label="01b Experience"] [data-layer] > span:first-child {
+    flex: 0 0 56px !important;
+    font-size: 9.5px !important;
+  }
+
+  /* — Case study "My Role" rows: allow wrapping (override inline styles) — */
+  #case div[style*="justify-content:space-between"] {
+    flex-wrap: wrap !important;
+    gap: 8px 16px !important;
+  }
+
+  /* — Technology grid: force single column — */
+  div[style*="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))"] {
+    grid-template-columns: 1fr;
+  }
+
+  /* — Contact CTA buttons: full width for better touch targets — */
+  #contact div[style*="flex-wrap:wrap"][style*="gap:12px"] a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* — Footer: tighter spacing — */
+  footer {
+    gap: 10px 24px;
+  }
+
+  /* — "Behind the Code" accordion buttons: prevent overflow — */
+  div[style*="flex:0 0 78px"] {
+    flex: 0 0 56px;
+  }
 }
