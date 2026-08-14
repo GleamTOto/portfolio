@@ -81,3 +81,21 @@ a:hover {
   transition: color .4s cubic-bezier(.25,.46,.45,.94),
               transform .4s cubic-bezier(.25,.46,.45,.94);
 }
+
+[data-img] {
+  transition: transform .7s cubic-bezier(.25,.46,.45,.94);
+}
+
+[data-num] {
+  transition: -webkit-text-stroke-color .5s cubic-bezier(.25,.46,.45,.94),
+              color .5s cubic-bezier(.25,.46,.45,.94);
+}
+
+[data-title] {
+  transition: color .4s cubic-bezier(.25,.46,.45,.94);
+}
+
+[data-cta] {
+  transition: gap .4s cubic-bezier(.25,.46,.45,.94),
+              color .4s cubic-bezier(.25,.46,.45,.94);
+}
